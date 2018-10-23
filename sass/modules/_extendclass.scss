@@ -1,0 +1,19 @@
+%container--fixed{
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1100px;
+  height: 100vh;
+  border-bottom: 1px solid black;
+  // @include mediaquery_phone{
+  //   max-width: $width--phone;
+  // }
+  // @include mediaquery_minipad{
+  //   max-width: $width--minipad;
+  // }
+  // @include mediaquery_pad{
+  //   max-width: $width--pad;
+  // }
+  // @include mediaquery_pc{
+  //   max-width: $width--pc;
+  // }
+}

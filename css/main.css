@@ -57,3 +57,205 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home__container, .intro__container, .question__baby__container, .question__pregnancy__container, .question__cost__container, .calc__container, .calcResult__container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1100px;
+  height: 100vh;
+  border-bottom: 1px solid black;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: rgba(255, 247, 226, 0.5);
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.nav__logo {
+  width: 198px;
+  height: 47px;
+}
+.nav__logo img {
+  width: 100%;
+}
+
+.nav__hamburger {
+  width: 28px;
+  height: 23px;
+  display: block;
+  background-image: url("../img/menu@2x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nav__hamburgercheck {
+  display: none;
+}
+
+.nav__list {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: -437px;
+  background-color: #FED1AE;
+  height: 100vh;
+  width: 30%;
+  padding: 20px;
+  flex-direction: column;
+  z-index: 3;
+}
+.nav__list label {
+  display: block;
+  height: 30px;
+  width: 100%;
+  text-align: right;
+  text-align: right;
+}
+.nav__list label i {
+  font-size: 30px;
+}
+.nav__list__item li {
+  display: flex;
+  border-bottom: 0.5px gray solid;
+  padding: 10px;
+  align-items: center;
+}
+.nav__list__item li i {
+  display: block;
+  font-size: 25px;
+  margin-right: 10px;
+}
+.nav__list__item li a {
+  display: block;
+  font-size: 20px;
+  color: gray;
+  line-height: 30px;
+}
+
+#hamburger:checked ~ .nav__list {
+  right: 0;
+}
+
+#home {
+  background-color: #fff7e2;
+}
+
+.home__container {
+  padding-top: 30vh;
+  text-align: center;
+}
+.home__container__img {
+  width: 165px;
+  height: 239px;
+  margin: 0 auto 36px;
+}
+.home__container__img img {
+  width: 100%;
+}
+.home__container__title {
+  font-family: 'Baloo', cursive;
+  font-size: 40px;
+  color: #ed6555;
+  margin: 0 auto;
+}
+.home__container__subtitle {
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 2;
+  color: #ed6555;
+}
+
+#intro {
+  background-color: #fff7e2;
+}
+
+.intro__container {
+  padding-top: 35vh;
+  display: flex;
+  align-items: flex-start;
+}
+.intro__container__mainImg {
+  width: 165px;
+  height: 239px;
+  margin: 0 auto 36px;
+}
+.intro__container__mainImg img {
+  width: 100%;
+}
+.intro__container__story {
+  width: 66%;
+  background-color: white;
+  font-size: 17px;
+  line-height: 2;
+  color: #4a4a4a;
+  padding: 27px 42px;
+  position: relative;
+  z-index: 2;
+}
+.intro__container__story__triangle {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid #fff7e2;
+  border-bottom: 15px solid #fff7e2;
+  border-right: 30px solid white;
+}
+
+#question__baby, #question__pregnancy, #question__cost {
+  background-color: #ed6555;
+}
+
+.question__baby__container, .question__pregnancy__container, .question__cost__container {
+  padding-top: 40vh;
+}
+.question__baby__container__title, .question__pregnancy__container__title, .question__cost__container__title {
+  font-size: 40px;
+  text-align: center;
+  color: #fff7e2;
+  margin-bottom: 20px;
+}
+.question__baby__container__subtitle, .question__pregnancy__container__subtitle, .question__cost__container__subtitle {
+  font-size: 17px;
+  color: #fff7e2;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.76;
+}
+
+#calc {
+  background-color: #fff7e2;
+}
+
+.calc__container {
+  height: auto;
+}
+
+#calcResult {
+  background-color: #fff7e2;
+}

@@ -1,0 +1,42 @@
+@import "compass/reset";
+@import "./modules/normalize.scss";
+@import "./modules/variables.scss";
+@import "./modules/mixin-mediaquery.scss";
+@import "./modules/extendclass.scss";
+#intro{
+  background-color: #fff7e2;
+}
+.intro__container{
+  @extend %container--fixed;
+  padding-top:35vh;
+  display: flex;
+  align-items:flex-start;
+  &__mainImg{
+    width: 165px;
+    height: 239px;
+    margin: 0 auto 36px;
+    img{
+      width: 100%;
+    }
+  }
+  &__story{
+    width: 66%;
+    background-color: white;
+    font-size: 17px;
+    line-height: 2;
+    color: #4a4a4a;
+    padding: 27px 42px;
+    position: relative;//爲了做三角型
+    z-index: 2;
+    &__triangle{
+      position: absolute;
+      top:50%;
+      left: -30px;
+      width: 0;
+      height: 0;
+      border-top: 15px solid #fff7e2;
+      border-bottom: 15px solid #fff7e2;
+      border-right: 30px solid white;
+    }
+  }
+}
