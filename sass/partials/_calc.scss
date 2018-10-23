@@ -1,0 +1,12 @@
+@import "compass/reset";
+@import "./modules/normalize.scss";
+@import "./modules/variables.scss";
+@import "./modules/mixin-mediaquery.scss";
+@import "./modules/extendclass.scss";
+#calc{
+  background-color: #fff7e2;
+}
+.calc__container{
+  @extend %container--fixed;
+  height: auto;
+}

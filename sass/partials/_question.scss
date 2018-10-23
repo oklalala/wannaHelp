@@ -1,0 +1,26 @@
+@import "compass/reset";
+@import "./modules/normalize.scss";
+@import "./modules/variables.scss";
+@import "./modules/mixin-mediaquery.scss";
+@import "./modules/extendclass.scss";
+#question__baby,#question__pregnancy,#question__cost{
+  background-color: #ed6555;
+}
+.question__baby__container,.question__pregnancy__container,.question__cost__container{
+  @extend %container--fixed;
+  padding-top: 40vh;
+  &__title{
+    font-size: 40px;
+    text-align: center;
+    color: #fff7e2;
+    margin-bottom: 20px;
+  }
+  &__subtitle{
+    font-size: 17px;
+    color: #fff7e2;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.76;
+  }
+}

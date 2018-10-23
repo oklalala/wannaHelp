@@ -1,0 +1,20 @@
+@mixin mediaquery_phone {
+    @media all and (min-width: $width--phone) {
+        @content;
+    }
+}
+@mixin mediaquery_minipad {
+    @media all and (min-width: $width--minipad) {
+        @content;
+    }
+}
+@mixin mediaquery_pad {
+    @media all and (min-width: $width--pad) {
+        @content;
+    }
+}
+@mixin mediaquery_pc{
+    @media all and (min-width: $width--pc){
+        @content;
+    }
+}
