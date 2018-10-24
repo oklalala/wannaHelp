@@ -67,7 +67,6 @@
     margin-right: 12px;
     input {
       display: none;
-
       &:checked + label::before {
         background-image: url(../img/uncheck@2x.png);
       }
@@ -87,7 +86,6 @@
     input:checked + label::before {
       background-image: url(../img/hide@2x.png);
     }
-
     label::before {
       background-image: url(../img/plus@2x.png);
     }
@@ -98,7 +96,7 @@
     line-height: 24px;
   }
   .quantity{
-    margin: 0 28% 0 8%;
+    margin: 0 25% 0 8%;
   }
 }
 
@@ -109,7 +107,6 @@
     align-items: center;
     padding: 12px 0;
   }
-  
 }
 
 
