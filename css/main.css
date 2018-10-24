@@ -307,6 +307,7 @@ nav {
 
 .cost__period__item {
   display: flex;
+  position: relative;
   align-items: center;
   padding: 10px 0px;
   margin: 20px auto;
@@ -318,25 +319,33 @@ nav {
 }
 .cost__period__item .star {
   margin-left: 16px;
-}
-.cost__period__item input {
-  width: 24px;
-  height: 24px;
-  margin-left: 9px;
-  margin-right: 12px;
-  position: relative;
-}
-.cost__period__item input:before {
-  content: "";
-  width: 24px;
-  height: 24px;
-  background: url(../img/plus@2x.png);
-  background-size: cover;
+  margin-right: 3px;
+  font-size: 15px;
   position: absolute;
 }
-.cost__period__item #a:checked:before {
-  background: url(../img/hide@2x.png);
+.cost__period__item__checkbox {
+  margin-left: 40px;
+  margin-right: 12px;
+}
+.cost__period__item__checkbox input {
+  display: none;
+}
+.cost__period__item__checkbox input:checked + label::before {
+  background-image: url(../img/uncheck@2x.png);
+}
+.cost__period__item__checkbox label::before {
+  background-image: url(../img/check@2x.png);
   background-size: cover;
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+.cost__period__item .expand input:checked + label::before {
+  background-image: url(../img/hide@2x.png);
+}
+.cost__period__item .expand label::before {
+  background-image: url(../img/plus@2x.png);
 }
 .cost__period__item .description {
   width: 146px;
