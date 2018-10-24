@@ -2,6 +2,10 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,6 +49,7 @@ caption, th, td {
 q, blockquote {
   quotes: none;
 }
+
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
@@ -81,7 +86,7 @@ a {
 }
 
 .calc__intro {
-  width: 1102px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 40px;
@@ -132,7 +137,7 @@ nav {
   display: flex;
   position: absolute;
   top: 0;
-  right: -437px;
+  right: -100%;
   background-color: #FED1AE;
   height: 100vh;
   width: 30%;
@@ -144,7 +149,6 @@ nav {
   display: block;
   height: 30px;
   width: 100%;
-  text-align: right;
   text-align: right;
 }
 .nav__list label i {
@@ -267,6 +271,7 @@ nav {
 
 .calc__container {
   height: auto;
+  position: relative;
 }
 
 .calc__intro__title {
@@ -275,9 +280,110 @@ nav {
   padding: 9px 0px 9px;
   display: flex;
 }
-.calc__intro__subtitle {
+.calc__intro__description {
   font-size: 17px;
   line-height: 30px;
+}
+
+.cost {
+  color: #ed6555;
+  width: 50%;
+}
+.cost__period {
+  margin-bottom: 50px;
+}
+.cost__period__title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.cost__period__title span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.cost__period__item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  margin: 20px auto;
+  background: white;
+  font-size: 17px;
+}
+.cost__period__item:last-child {
+  margin-bottom: 50px;
+}
+.cost__period__item .star {
+  margin-left: 16px;
+}
+.cost__period__item input {
+  width: 24px;
+  height: 24px;
+  margin-left: 9px;
+  margin-right: 12px;
+  position: relative;
+}
+.cost__period__item input:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(../img/plus@2x.png);
+  background-size: cover;
+  position: absolute;
+}
+.cost__period__item #a:checked:before {
+  background: url(../img/hide@2x.png);
+  background-size: cover;
+}
+.cost__period__item .description {
+  width: 146px;
+  line-height: 24px;
+}
+.cost__period__item .quantity {
+  margin: 0 28% 0 8%;
+}
+
+.cost__period__item__expand {
+  width: 100%;
+}
+.cost__period__item__expand__list {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.cost__period__item__referance {
+  text-align: right;
+}
+.cost__period__item__referance a {
+  color: #ed6555;
+  text-decoration: underline;
+}
+
+.total {
+  position: sticky;
+  top: 60px;
+  margin-bottom: 50px;
+  float: right;
+  width: 430px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.total__title {
+  border-radius: 6px 6px 0 0;
+  background: #f7f7f8;
+  color: #9b9b9b;
+  font-size: 15px;
+  line-height: 29px;
+}
+.total__amount {
+  background: #fff7e2;
+  color: #ed6555;
+  font-size: 40px;
+  line-height: 97px;
 }
 
 #calcResult {
