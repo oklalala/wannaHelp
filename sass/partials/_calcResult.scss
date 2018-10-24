@@ -3,6 +3,7 @@
 @import "./modules/extendclass.scss";
 #calcResult{
   background-color: #fff7e2;
+  position: relative;
 }
 .calcResult__container{
   @extend %container--fixed;
@@ -91,7 +92,10 @@
 .reference{
   background-color: #fff;
   padding: 25px 0;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   text-align: center;
   &__text {
     color: $hot__color;
@@ -136,4 +140,3 @@
       }
   }
 }
-// 隱藏 reference list

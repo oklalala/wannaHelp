@@ -433,7 +433,8 @@ nav {
     margin-right: 20px; }
 
 #calcResult {
-  background-color: #fff7e2; }
+  background-color: #fff7e2;
+  position: relative; }
 
 .calcResult__container {
   border-bottom: none;
@@ -508,7 +509,10 @@ nav {
 .reference {
   background-color: #fff;
   padding: 25px 0;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   text-align: center; }
   .reference__text {
     color: #ed6555;
