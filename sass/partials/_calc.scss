@@ -1,4 +1,4 @@
-@import "compass/reset";
+@import "./modules/reset.scss";
 @import "./modules/normalize.scss";
 @import "./modules/variables.scss";
 @import "./modules/mixin-mediaquery.scss";
@@ -9,6 +9,7 @@
 .calc__container{
   @extend %container--fixed;
   height: auto;
+  position: relative;
 }
 
 .calc__intro{
@@ -19,8 +20,79 @@
     padding: 9px 0px 9px;
     display: flex;
   }
-  &__subtitle{
+  &__description{
     font-size: 17px;
     line-height: 30px;
   }
 }
+.cost {
+  color: $hot__color;
+  width: 50%;
+  &__title{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+}
+
+.cost__item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  margin: 20px auto;
+  background: white;
+  font-size: 17px;
+  .star {
+    margin-left: 16px;
+  }
+  input {
+    width: 24px;
+    height: 24px;
+    margin-left: 9px;
+    margin-right: 12px;
+  }
+    
+  .description {
+    width: 146px;
+    line-height: 24px;
+  }
+  .quantity{
+    margin: 0 30% 0 10%;
+  }
+  
+}
+
+
+
+.cost__itme__referance {
+  text-align: right;
+}
+
+.total {
+  position: sticky;
+  top: 200px;
+  right: 20px;
+  width: 430px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px 4px rgba(0, 0, 0, 0.1);
+  &__title{
+    border-radius: 6px 6px 0 0;
+    color: $label__font__color;
+    font-size: 15px;
+    background: $label__background__color;
+    line-height: 29px;
+  }
+  &__amount{
+    color: $hot__color;
+    font-size: 40px;
+    line-height: 97px;
+  }
+}
+
