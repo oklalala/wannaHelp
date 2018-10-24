@@ -53,6 +53,7 @@ nav{
       font-size: 30px;
     }
   }
+  transition: all .5s ease-in-out;
   &__item{
     li{
       display: flex;
