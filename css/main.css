@@ -92,7 +92,7 @@ a {
   border-bottom: 1px solid black; }
 
 .calc__intro {
-  width: 1102px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 40px;
@@ -152,7 +152,6 @@ nav {
   -ms-flex-direction: column;
   flex-direction: column;
   z-index: 3;
-
   -webkit-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out; }
@@ -160,7 +159,6 @@ nav {
     display: block;
     height: 30px;
     width: 100%;
-    text-align: right;
     text-align: right; }
     .nav__list label i {
       font-size: 30px; }
@@ -194,7 +192,7 @@ nav {
   border-bottom: 1px solid black; }
 
 .calc__intro {
-  width: 1102px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 40px;
@@ -235,7 +233,7 @@ nav {
   border-bottom: 1px solid black; }
 
 .calc__intro {
-  width: 1102px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 40px;
@@ -289,7 +287,7 @@ nav {
   border-bottom: 1px solid black; }
 
 .calc__intro {
-  width: 1102px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 40px;
@@ -325,7 +323,7 @@ nav {
   border-bottom: 1px solid black; }
 
 .calc__intro {
-  width: 1102px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 40px;
@@ -342,7 +340,6 @@ nav {
   height: auto;
   position: relative; }
 
-
 .calc__intro__title {
   font-size: 40px;
   font-weight: 500;
@@ -358,17 +355,19 @@ nav {
 .cost {
   color: #ed6555;
   width: 50%; }
-  .cost__title {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 30px; }
-    .cost__title span {
-      display: inline-block;
-      vertical-align: middle;
-      font-size: 15px;
-      font-weight: 400; }
+  .cost__period {
+    margin-bottom: 50px; }
+    .cost__period__title {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 30px; }
+      .cost__period__title span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 15px;
+        font-weight: 400; }
 
-.cost__item {
+.cost__period__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -379,39 +378,68 @@ nav {
   margin: 20px auto;
   background: white;
   font-size: 17px; }
-  .cost__item .star {
+  .cost__period__item:last-child {
+    margin-bottom: 50px; }
+  .cost__period__item .star {
     margin-left: 16px; }
-  .cost__item input {
+  .cost__period__item input {
     width: 24px;
     height: 24px;
     margin-left: 9px;
-    margin-right: 12px; }
-  .cost__item .description {
+    margin-right: 12px;
+    position: relative; }
+    .cost__period__item input:before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: url(../img/plus@2x.png);
+      background-size: cover;
+      position: absolute; }
+  .cost__period__item #a:checked:before {
+    background: url(../img/hide@2x.png);
+    background-size: cover; }
+  .cost__period__item .description {
     width: 146px;
     line-height: 24px; }
-  .cost__item .quantity {
-    margin: 0 30% 0 10%; }
+  .cost__period__item .quantity {
+    margin: 0 28% 0 8%; }
 
-.cost__itme__referance {
+.cost__period__item__expand {
+  width: 100%; }
+  .cost__period__item__expand__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 12px 0; }
+
+.cost__period__item__referance {
   text-align: right; }
+  .cost__period__item__referance a {
+    color: #ed6555;
+    text-decoration: underline; }
 
 .total {
   position: -webkit-sticky;
   position: sticky;
-  top: 200px;
-  right: 20px;
+  top: 60px;
+  margin-bottom: 50px;
+  float: right;
   width: 430px;
-  text-align: center;
   border-radius: 6px;
   -webkit-box-shadow: 0 2px 6px 4px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 6px 4px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 2px 6px 4px rgba(0, 0, 0, 0.1);
+  text-align: center; }
   .total__title {
     border-radius: 6px 6px 0 0;
+    background: #f7f7f8;
     color: #9b9b9b;
     font-size: 15px;
-    background: #f7f7f8;
     line-height: 29px; }
   .total__amount {
+    background: #fff7e2;
     color: #ed6555;
     font-size: 40px;
     line-height: 97px; }
@@ -424,7 +452,7 @@ nav {
   border-bottom: 1px solid black; }
 
 .calc__intro {
-  width: 1102px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 40px;
