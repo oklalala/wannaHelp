@@ -1,0 +1,25 @@
+@import "./modules/variables.scss";
+@import "./modules/mixin-mediaquery.scss";
+@import "./modules/extendclass.scss";
+#safety{
+  background-color: #fff7e2;
+}
+.safety__container{
+  @extend %container--fixed;
+  height: auto;
+  position: relative;
+}
+
+.safety__intro{
+  @extend %answer__title__template;
+  &__title{
+    @extend %title__display;
+    img {
+      width: 61px;
+      height: 45px;
+    }
+  }
+  &__description{
+    @extend %description__display;
+  }
+}
