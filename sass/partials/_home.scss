@@ -30,3 +30,23 @@
     color: #ed6555;
   }
 }
+.home__container__img:hover{
+  animation-name: babymove;
+  animation-duration:5s;
+  animation-direction:alternate;
+  animation-fill-mode:both;
+  // animation-iteration-count:infinite;
+}
+
+
+@keyframes babymove{
+  0%{
+    transform:translate(0,0);
+  }
+  50%{
+    transform:translate(-45vw,20vh);
+  }
+  100%{
+    transform:translate(-25vw,100vh);
+  }
+}

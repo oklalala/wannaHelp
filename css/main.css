@@ -206,12 +206,30 @@ nav {
   color: #ed6555;
 }
 
+.home__container__img:hover {
+  animation-name: babymove;
+  animation-duration: 5s;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+
+@keyframes babymove {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-45vw, 20vh);
+  }
+  100% {
+    transform: translate(-25vw, 100vh);
+  }
+}
 #intro {
   background-color: #fff7e2;
 }
 
 .intro__container {
-  padding-top: 35vh;
+  padding-top: 30vh;
   display: flex;
   align-items: flex-start;
 }
@@ -222,6 +240,7 @@ nav {
 }
 .intro__container__mainImg img {
   width: 100%;
+  visibility: hidden;
 }
 .intro__container__story {
   width: 66%;
