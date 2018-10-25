@@ -105,7 +105,7 @@ a {
   display: flex;
 }
 
-.bmi__intro__description, .death__intro__description {
+.bmi__intro__description, .death__intro__description, .chart__description {
   font-size: 17px;
   line-height: 30px;
 }
@@ -297,6 +297,77 @@ nav {
 }
 .death__container img {
   height: 47px;
+}
+
+.chart {
+  color: #ed6555;
+  padding-bottom: 50px;
+}
+.chart__title {
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.column__half {
+  width: 50%;
+}
+
+.chart__legand {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.chart__legand__item {
+  display: flex;
+  width: 50%;
+  margin-bottom: 20px;
+}
+.chart__legand__item__color {
+  width: 36px;
+  height: 16px;
+  margin-right: 12px;
+}
+.chart__legand__item:nth-child(1) .chart__legand__item__color {
+  background-color: #ed6555;
+}
+.chart__legand__item:nth-child(2) .chart__legand__item__color {
+  background-color: #50e3c2;
+}
+.chart__legand__item:nth-child(3) .chart__legand__item__color {
+  background-color: #f5a623;
+}
+.chart__legand__item:nth-child(4) .chart__legand__item__color {
+  background-color: #b8e986;
+}
+.chart__legand__item:nth-child(5) .chart__legand__item__color {
+  background-color: #ffcc01;
+}
+.chart__legand__item:nth-child(6) .chart__legand__item__color {
+  background-color: #2ebb86;
+}
+.chart__legand__item:nth-child(7) .chart__legand__item__color {
+  background-color: #bc6cca;
+}
+.chart__legand__item:nth-child(8) .chart__legand__item__color {
+  background-color: #6fa8eb;
+}
+.chart__legand__item:nth-child(9) .chart__legand__item__color {
+  background-color: #633ebb;
+}
+.chart__legand__item:nth-child(10) .chart__legand__item__color {
+  background-color: #0082c3;
+}
+.chart__legand__item:nth-child(11) .chart__legand__item__color {
+  background-color: #9b9b9b;
+}
+.chart__legand__item__label {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.column__half .chart__description {
+  padding-right: 80px;
 }
 
 #calc {
