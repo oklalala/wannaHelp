@@ -29,5 +29,16 @@
     height: 38px;
     margin-right: 20px;
   }
-  
+}
+
+%title__display{
+  font-size: 40px;
+  font-weight: 500;
+  padding: 9px 0px 9px;
+  display: flex;
+}
+
+%description__display {
+  font-size: 17px;
+  line-height: 30px;
 }
