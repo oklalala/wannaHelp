@@ -1,0 +1,24 @@
+@import "./modules/variables.scss";
+@import "./modules/mixin-mediaquery.scss";
+@import "./modules/extendclass.scss";
+#death{
+  background-color: #fff7e2;
+}
+.death__container{
+  @extend %container--fixed;
+  height: auto;
+  position: relative;
+  img {
+    height: 47px;
+  }
+}
+
+.death__intro{
+  @extend %answer__title__template;
+  &__title{
+    @extend %title__display;
+  }
+  &__description{
+    @extend %description__display;
+  }
+}
