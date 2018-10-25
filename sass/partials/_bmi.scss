@@ -1,15 +1,12 @@
-@import "./modules/variables.scss";
-@import "./modules/mixin-mediaquery.scss";
-@import "./modules/extendclass.scss";
 #bmi{
   background-color: #fff7e2;
 }
 .bmi__container{
   @extend %container--fixed;
+  border-bottom: none;
   height: auto;
-  position: relative;
+  padding-top: 120px;
 }
-
 .bmi__intro{
   @extend %answer__title__template;
   &__title{
@@ -17,5 +14,139 @@
   }
   &__description{
     @extend %description__display;
+  }
+}
+
+.bmi__weightScale{
+  &__title{
+    font-size: 24px;
+    font-weight: 550;
+    color: #ed6555;
+    margin-bottom: 29px;
+  }
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    &__input{
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      &__heightText,&__weightText{
+        font-size: 17px;
+        font-weight: 500;
+        color: #ed6555;
+        margin-bottom: 6px;
+      }
+      &__heightInput,&__weightInput{
+        width: 100%;
+        height: 50px;
+        border-radius: 6px;
+        background-color: #ffffff;
+        border: none;
+        margin-bottom: 30px;
+        font-size: 20px;
+        color: #4a4a4a;
+        padding-left: 9px;
+      }
+      button{
+        width: 100%;
+        height: 50px;
+        border-radius: 6px;
+        background-color: #ed6555;
+        border: none;
+        color: white;
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+    &__result{
+      width: 30%;
+      &__bmiTitle,&__weightTitle{
+        width: 100%;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 6px;
+        background-color: #f7f7f8;
+        font-size: 15px;
+        font-weight: 600;
+        color: #9b9b9b;
+      }
+      &__bmiresult,&__weightresult{
+        width: 100%;
+        line-height: 60px;
+        border-radius: 6px;
+        background-color: #ffffff;
+        font-size: 34px;
+        font-weight: 500;
+        color: #ed6555;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+      }
+      &__bmiintro,&__weightintro{
+        width: 240px;
+        height: 30px;
+        font-family: PingFangTC;
+        font-size: 13px;
+        line-height: 2;
+        letter-spacing: normal;
+        color: #9b9b9b;
+      }
+      &__bmiintro{
+        margin-bottom: 20px;
+      }
+    }
+    &__ideal{
+      width: 30%;
+      position: relative;
+      &__img{
+        width: 203px;
+        height: 219px;
+        position: relative;
+        margin: 0 auto;
+        img{
+          width: 100%;
+        }
+        &__ideal{
+          position: absolute;
+          bottom:43px;
+          left: 54.3px;
+          font-size: 34px;
+          font-weight: bold;
+          text-align: center;
+          color: #ed6555;
+          span{
+            margin-left: 8px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  &__intro{
+    font-size: 17px;
+    line-height: 1.76;
+    color: #ed6555;
+    padding: 20px 0;
+  }
+  &__table{
+    width: 100%;
+    border: solid 1px #fb998d;
+    font-family: 'Roboto', sans-serif;
+    &__title{
+      background-color: #fb998d;
+      color:white;
+      height: 44px;
+    }
+    &__content{
+      background-color: #ffffff;
+      border-bottom: solid 1px #fb998d;
+      height: 44px;
+      font-size: 17px;
+      color: #ed6555;
+    }
+    td{
+      text-align: center;
+      width: 33%;
+    }
   }
 }

@@ -6,7 +6,7 @@
 }
 .intro__container{
   @extend %container--fixed;
-  padding-top:35vh;
+  padding-top:30vh;
   display: flex;
   align-items:flex-start;
   &__mainImg{
@@ -15,6 +15,7 @@
     margin: 0 auto 36px;
     img{
       width: 100%;
+      visibility: hidden;
     }
   }
   &__story{
