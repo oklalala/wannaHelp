@@ -1,0 +1,76 @@
+@import "./modules/variables.scss";
+@import "./modules/mixin-mediaquery.scss";
+@import "./modules/extendclass.scss";
+#death{
+  background-color: #fff7e2;
+}
+.death__container{
+  @extend %container--fixed;
+  height: auto;
+  position: relative;
+  img {
+    height: 47px;
+  }
+}
+
+.death__intro{
+  @extend %answer__title__template;
+  &__title{
+    @extend %title__display;
+  }
+  &__description{
+    @extend %description__display;
+  }
+}
+.chart{
+  color: $hot__color;
+  padding-bottom: 50px;
+  
+  &__title {
+    font-size: 24px;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+  &__description {
+    @extend %description__display;
+  }
+}
+.column__half {
+  width: 50%
+}
+.chart__legand{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  &__item {
+    display: flex;
+    width: 50%;
+    margin-bottom: 20px;
+    
+    &__color{
+      width: 36px;
+      height: 16px;
+      margin-right: 12px;
+    }
+    &:nth-child(1) &__color{ background-color: #ed6555; }
+    &:nth-child(2) &__color{ background-color: #50e3c2; }
+    &:nth-child(3) &__color{ background-color: #f5a623; }
+    &:nth-child(4) &__color{ background-color: #b8e986; }
+    &:nth-child(5) &__color{ background-color: #ffcc01; }
+    &:nth-child(6) &__color{ background-color: #2ebb86; }
+    &:nth-child(7) &__color{ background-color: #bc6cca; }
+    &:nth-child(8) &__color{ background-color: #6fa8eb; }
+    &:nth-child(9) &__color{ background-color: #633ebb; }
+    &:nth-child(10) &__color{ background-color: #0082c3; }
+    &:nth-child(11) &__color{ background-color: #9b9b9b; }
+    
+    &__label{
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}
+
+.column__half .chart__description{
+  padding-right: 80px;
+}
