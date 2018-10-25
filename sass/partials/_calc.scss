@@ -44,6 +44,7 @@
 
 .cost__period__item {
   display: flex;
+  position: relative;
   align-items: center;
   padding: 10px 0px;
   margin: 20px auto;
@@ -54,27 +55,40 @@
   }
   .star {
     margin-left: 16px;
+    margin-right: 3px;
+    font-size: 15px;
+    position: absolute;
   }
 
-  input {
-    width: 24px;
-    height: 24px;
-    margin-left: 9px;
+  &__checkbox {
+    // display: flex;
+    // align-items: center;
+    margin-left: 40px;
     margin-right: 12px;
-    // display: none;
-    position: relative;
-    &:before {
-      content: "";
-      width: 24px;
-      height: 24px;
-      background: url(../img/plus@2x.png);
+    input {
+      display: none;
+      &:checked + label::before {
+        background-image: url(../img/uncheck@2x.png);
+      }
+    }
+
+    label::before {
+      background-image: url(../img/check@2x.png);
       background-size: cover;
-      position: absolute;
+      content: '';
+      display: inline-block;
+      height: 24px;
+      width: 24px;
     }
   }
-  #a:checked:before{
-    background: url(../img/hide@2x.png);
-    background-size: cover;
+
+  .expand {
+    input:checked + label::before {
+      background-image: url(../img/hide@2x.png);
+    }
+    label::before {
+      background-image: url(../img/plus@2x.png);
+    }
   }
     
   .description {
@@ -82,7 +96,7 @@
     line-height: 24px;
   }
   .quantity{
-    margin: 0 28% 0 8%;
+    margin: 0 25% 0 8%;
   }
 }
 
@@ -94,6 +108,8 @@
     padding: 12px 0;
   }
 }
+
+
 
 .cost__period__item__referance {
   text-align: right;
