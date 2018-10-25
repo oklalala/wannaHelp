@@ -8,29 +8,12 @@
   padding-top: 120px;
 }
 .bmi__intro{
-  padding-bottom: 40px;
+  @extend %answer__title__template;
   &__title{
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-    &__icon{
-      width: 37px;
-      height: 37px;
-      margin-right: 14px;
-      img{
-        width: 100%;
-      }
-    }
-    &__text{
-      font-size: 40px;
-      font-weight: 500;
-      color: #ed6555;
-    }
+    @extend %title__display;
   }
   &__description{
-    font-size: 17px;
-    line-height: 1.76;
-    color: #ed6555;
+    @extend %description__display;
   }
 }
 
