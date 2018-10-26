@@ -21,7 +21,7 @@
   }
 }
 
-.protect{
+.safety{
   color: $hot__color;
   padding-bottom: 50px;
   &__text{
@@ -57,7 +57,7 @@
   }
 }
 
-.protect__prevent {
+.safety__prevent {
   &__title {
     text-align: center;
     font-size: 20px;
@@ -93,7 +93,7 @@
   }
 }
 
-.protect {
+.safety {
   &__cards{
     display: flex;
     flex-wrap: wrap;
