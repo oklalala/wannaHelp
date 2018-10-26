@@ -35,8 +35,8 @@ function openLinks(e) {
         referenceText.style.cursor = 'pointer';
         reference.style.paddingBottom = '0';
     }
-    
-    
+
+
 }
 
 reference.addEventListener('click', openLinks);
@@ -49,3 +49,19 @@ function initMap() {
         zoom: 8
     });
 }
+
+//homebabymove(.babyactive)
+const babyImg = document.querySelector(".home__container__img")
+
+function babymove(){
+  // const moveToIntroAt = (babyImg.offsetTop) + ( babyImg.clientHeight / 2 );
+const moveToIntroAt = (babyImg.offsetTop) + ( babyImg.clientHeight );
+  console.log(window.scrollY);
+  if (window.scrollY > moveToIntroAt){
+    babyImg.classList.add('babyactive');
+  } else{
+    babyImg.classList.remove('babyactive');
+  }
+}
+
+window.addEventListener('scroll',debounce(babymove,5));
