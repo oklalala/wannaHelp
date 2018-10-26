@@ -22,7 +22,7 @@ const referenceText = document.querySelector('.reference__text');
 const referenceList = document.querySelector('.reference__list');
 
 function changePage(e) {
-    console.log(e);
+    // console.log(e);
 }
 
 function openLinks(e) {
@@ -40,4 +40,12 @@ function openLinks(e) {
 }
 
 reference.addEventListener('click', openLinks);
-window.addEventListener('scroll', debounce(changePage));
+// window.addEventListener('scroll', debounce(changePage));
+
+var map;
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8
+    });
+}
