@@ -29,8 +29,8 @@
   }
   
   &__title {
-    font-size: 24px;
     margin-bottom: 16px;
+    font-size: 24px;
     font-weight: bold;
   }
   &__description {
@@ -38,13 +38,7 @@
     margin-bottom: 20px;
   }
   &__hint{
-    color:$hint__font__color;
-    background: white;
-    border-radius: 10px;
-    padding: 10px 20px;
-
-    font-size: 15px;
-    line-height: 30px;
+    @extend %hint__display;
   }
   &__image{
     text-align: center;
@@ -58,63 +52,22 @@
 }
 
 .safety__prevent {
+  text-align: center;
   &__title {
-    text-align: center;
-    font-size: 20px;
     margin-top: 30px;
+    font-size: 20px;
   }
-  &__cards{
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 37px;
-  }
-  &__card{
-    width: 30%;
-    text-align: center;
-    margin-top: 40px;
-    margin-right: 5%;
-    img {
-      width: 90px;
-      height: 90px;
-      margin-bottom: 20px;
-    }
-    &:nth-child(3n){
-      margin-right: 0;
-    }
-  }
+  
+  @include cards(40px, 90px);
+  
   &__hint{
-    color:$hint__font__color;
-    background: white;
-    border-radius: 10px;
-    padding: 10px 20px;
-
-    font-size: 15px;
-    line-height: 30px;
+    @extend %hint__display;
+    text-align: left;
   }
 }
 
 .safety {
-  &__cards{
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 37px;
-  }
-  &__card{
-    width: 30%;
-    margin-right: 5%;
-    margin-top: 20px;
-    img {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-    &:nth-child(3n){
-      margin-right: 0;
-    }
-    &__label {
-      font-size: 15px;
-      line-height: 30px;
-    }
-  }
+  @include cards;
 }
 
 

@@ -42,3 +42,13 @@
   font-size: 17px;
   line-height: 30px;
 }
+
+%hint__display{
+  background: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+
+  color: $hint__font__color;
+  font-size: 15px;
+  line-height: 30px;
+}

@@ -18,3 +18,26 @@
         @content;
     }
 }
+
+@mixin cards($margin__top:20px, $image__width:100%) {
+    &__cards{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 37px;
+    }
+    &__card{
+        width: 30%;
+        margin-top: $margin__top;
+        margin-right: 5%;
+        img {
+        width: $image__width;
+        margin-bottom: 10px;
+        }
+        &:nth-child(3n){
+        margin-right: 0;
+        }
+        &__label {
+            line-height: 30px;
+        }
+    }
+}
