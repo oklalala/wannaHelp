@@ -128,7 +128,10 @@ function drawChart() {
     },
     //提示標籤的相關設定
     tooltip:{
-      textStyle: {color: '#4a4a4a'},
+      textStyle: {
+        color: '#4a4a4a',
+        fontSize: 12,
+      },
       showColorCode: true,
     }
   };
