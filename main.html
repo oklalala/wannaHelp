@@ -7,13 +7,14 @@
   <title>祝妳好孕</title>
   <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <link rel="stylesheet" href="css/main.css"/>
 </head>
 
 
 <body>
   <nav>
-    <div class="nav__card">
+    <div class="nav__logo">
       <img src="./img/headerlogo@2x.png" alt="logo">
     </div>
     <label class="nav__hamburger" for="hamburger"></label>
@@ -159,11 +160,11 @@
       <div class="chart">
         <div class="chart__title">台灣各縣市嬰兒死亡率比較</div>
           <div class="chart__description">那到底為什麼台灣的嬰兒死亡率會一直達不到我國對永續發展目標(SDGs)，「新生兒死亡率維持或低於千分之2.4」的標準？讓我們來看看台灣各縣市的嬰兒死亡率。</div>
-          
+
         <div class="chart__data"></div>
         <div class="chart__description">2017年台灣嬰兒死亡率為4.0‰，而花蓮縣、台東縣超過6.0‰，屏東縣、高雄市超過5.0‰，是嬰兒高死亡率的紅燈區。衛福部次長薛瑞元時指出，主要原因仍可能與偏遠地區醫療的可近性不足且高風險妊娠處理能力不夠等因素有關。</div>
       </div>
-      <div class="chart">
+      <div class="chart babypiechart">
         <div class="chart__title">嬰幼兒十大死因死因</div>
         <div class="column__half">
           <div class="chart__description">透過衛福部的嬰幼兒十大死因來看，連續5年死因首位為「先天性畸形、變形及染色體異常」，「周產期呼吸疾患」、「與妊娠長短及胎兒生長有關疾患」、「事故傷害」及「特發於周產期的感染」位居第2到5名死亡因素，占率約 53%。值得注意的是，其中未滿4周的新生兒，每年死亡人數就占整體
@@ -215,7 +216,10 @@
             </div>
           </div>
         </div>
-        <div class="chart__data"></div>
+        <div class="chart__data deathpiechart">
+          <div id="piechart"></div>
+        </div>
+        <!-- <div id="piechart"></div> -->
       </div>
 
       <div class="chart">
@@ -268,7 +272,7 @@
           <div class="column__half">
             <div class="safety__prevent">
               <div class="safety__prevent__title">如何預防羊水早破</div>
-              <div class="safety__prevent__cards">  
+              <div class="safety__prevent__cards">
                 <div class="safety__prevent__card">
                   <img src="img/rejection@2x.png" alt="">
                   <div class="safety__prevent__card__label">堅持定期做產前檢查</div>

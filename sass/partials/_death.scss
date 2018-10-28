@@ -22,7 +22,7 @@
 .chart{
   color: $hot__color;
   padding-bottom: 50px;
-  
+
   &__title {
     font-size: 24px;
     margin-bottom: 16px;
@@ -41,7 +41,7 @@
     display: flex;
     width: 50%;
     margin-bottom: 20px;
-    
+
     &__color{
       width: 36px;
       height: 16px;
@@ -58,7 +58,7 @@
     &:nth-child(9) &__color{ background-color: #633ebb; }
     &:nth-child(10) &__color{ background-color: #0082c3; }
     &:nth-child(11) &__color{ background-color: #9b9b9b; }
-    
+
     &__label{
       font-size: 15px;
       line-height: 20px;
@@ -68,4 +68,14 @@
 
 .column__half .chart__description{
   padding-right: 80px;
+}
+
+//lai
+.babypiechart{
+  position: relative;
+}
+.deathpiechart{
+  position: absolute;
+  top:85px;
+  right:73px;
 }
