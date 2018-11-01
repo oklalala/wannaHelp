@@ -16,7 +16,6 @@ xhrBabydeath.onreadystatechange = function(){
     var htmlLegandLabel = document.querySelectorAll('.chart__legand__item__label');
     // for(j=0;j<htmlLegandLabel.length;j++){
     for(j=0;j<9;j++){
-      console.log(htmlLegandLabel[j])
       htmlLegandLabel[j].innerHTML = apiDataBabydeath.response[j][0];
     }
     //google piechart
