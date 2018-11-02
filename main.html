@@ -74,24 +74,24 @@
         <div class="bmi__weightScale__title">孕婦的理想體重機</div>
         <div class="bmi__weightScale__content">
           <div class="bmi__weightScale__content__input">
-            <div class="bmi__weightScale__content__input__heightText">輸入你的身高 (cm)</div>
-            <input class="bmi__weightScale__content__input__heightInput" type="text" name="" value="" placeholder="160">
-            <div class="bmi__weightScale__content__input__weightText">輸入你的體重 (kg)</div>
-            <input class="bmi__weightScale__content__input__weightInput" type="text" name="" value="" placeholder="56">
-            <button>開始計算</button>
+              <div class="bmi__weightScale__content__input__heightText">輸入你的身高 (cm)</div>
+              <input class="bmi__weightScale__content__input__heightInput" type="text" name="" placeholder="請輸入您的身高">
+              <div class="bmi__weightScale__content__input__weightText">輸入你的體重 (kg)</div>
+              <input class="bmi__weightScale__content__input__weightInput" type="text" name="" placeholder="請輸入您的體重">
+              <button class="bmi__weightScale__content__input__button">開始計算</button>
           </div>
           <div class="bmi__weightScale__content__result">
             <div class="bmi__weightScale__content__result__bmiTitle">目前 BMI 值</div>
-            <div class="bmi__weightScale__content__result__bmiresult">18</div>
+            <div class="bmi__weightScale__content__result__bmiresult"></div>
             <div class="bmi__weightScale__content__result__bmiintro">BMI =  體重 / 身高平方 ( kg / m2 )</div>
             <div class="bmi__weightScale__content__result__weightTitle">孕前建議體重</div>
-            <div class="bmi__weightScale__content__result__weightresult">53.6</div>
+            <div class="bmi__weightScale__content__result__weightresult"></div>
             <div class="bmi__weightScale__content__result__weightintro">孕前標準體重 =  身高平方 × 22 (m2 x 22) </div>
           </div>
           <div class="bmi__weightScale__content__ideal">
             <div class="bmi__weightScale__content__ideal__img">
               <img src="./img/scale@2x.png" alt="">
-              <div class="bmi__weightScale__content__ideal__img__ideal">63.4s<span>kg</span></div>
+              <div class="bmi__weightScale__content__ideal__img__ideal"></div>
             </div>
           </div>
         </div>
@@ -343,6 +343,7 @@
         <div class="safety__title">婦幼安全地圖</div>
         <div class="safety__description">除了媽媽自已多一份細心以外，也要小心來自外部的傷害，我們可以避免出入高危險場所，我們提供了一份犯罪地圖，標示出所有曾經有犯罪的地標、以及附近的區域，希望能夠提供需要外出的孕婦，能夠盡量避免獨自到這些地方。</div>
       </div>
+      <div id="map"></div>
     </div>
     <div class="referance"></div>
   </section>
@@ -660,6 +661,10 @@
     </div>
   </section>
   <script src="script/main.js"></script>
+  <script src="script/map.js"></script>
+  <script src="script/babymove.js"></script>
   <script src="script/piechart.js"></script>
+  <script src="script/bmicalc.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvl3VV9SXrOSgvQM7QJepGoCUs7RX8jFc&callback=initMap" async defer></script>
 </body>
 </html>
