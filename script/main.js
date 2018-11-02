@@ -35,8 +35,8 @@ function openLinks(e) {
         reference.style.paddingBottom = '0';
         document.querySelector('label[for="reference__toggle__checkbox"]').style.display = 'none';
     }
-    
-    
+
+
 }
 
 reference.addEventListener('click', openLinks);
