@@ -7,16 +7,16 @@ function drawMultSeries() {
   data.addColumn('number', 'Motivation Level');
 
   data.addRows([
-    [{ v: [8, 0, 0], f: '8 am' }, 1],
-    [{ v: [9, 0, 0], f: '9 am' }, 2],
-    [{ v: [10, 0, 0], f: '10 am' }, 3],
-    [{ v: [11, 0, 0], f: '11 am' }, 4],
-    [{ v: [12, 0, 0], f: '12 pm' }, 5],
-    [{ v: [13, 0, 0], f: '1 pm' }, 6],
-    [{ v: [14, 0, 0], f: '2 pm' }, 7],
-    [{ v: [15, 0, 0], f: '3 pm' }, 8],
-    [{ v: [16, 0, 0], f: '4 pm' }, 9],
-    [{ v: [17, 0, 0], f: '5 pm' }, 10],
+    [{ v: [2, 0, 0], f: '台南' }, 1],
+    [{ v: [9, 0, 0], f: '高雄' }, 2],
+    [{ v: [10, 0, 0], f: '台中' }, 3],
+    [{ v: [11, 0, 0], f: '台北' }, 4],
+    [{ v: [12, 0, 0], f: '基隆' }, 5],
+    [{ v: [13, 0, 0], f: '新北' }, 6],
+    [{ v: [14, 0, 0], f: '苗栗' }, 7],
+    [{ v: [15, 0, 0], f: '南投' }, 8],
+    [{ v: [16, 0, 0], f: '嘉義' }, 9],
+    [{ v: [17, 0, 0], f: '花蓮' }, 10],
   ]);
 
   var options = {
@@ -30,7 +30,9 @@ function drawMultSeries() {
     },
     vAxis: {
       // title: 'Rating (scale of 1-10)'
-    }
+    },
+    backgroundColor: '#fff7e2',
+
   };
 
   var chart = new google.visualization.ColumnChart(
