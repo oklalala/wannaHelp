@@ -14,8 +14,6 @@ function debounce(func, wait = 20, immediate = true) {
     };
   }
 
-
-
 // cost-result reference
 const reference = document.querySelector('.reference');
 const referenceText = document.querySelector('.reference__text');
@@ -30,22 +28,16 @@ function openLinks(e) {
         referenceList.classList.add('reference__list__active');
         e.target.style.cursor = 'auto';
         reference.style.paddingBottom = '25px';
+        document.querySelector('label[for="reference__toggle__checkbox"]').style.display = 'inline';
     } else if (e.target.matches('input[type="checkbox"]')) {
         referenceList.classList.remove('reference__list__active');
         referenceText.style.cursor = 'pointer';
         reference.style.paddingBottom = '0';
+        document.querySelector('label[for="reference__toggle__checkbox"]').style.display = 'none';
     }
     
     
 }
 
 reference.addEventListener('click', openLinks);
-// window.addEventListener('scroll', debounce(changePage));
-
-var map;
-function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8
-    });
-}
+// window.addEventListener('scroll', debounce(changePage))
