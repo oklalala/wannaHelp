@@ -17,7 +17,7 @@ xhrGlobalBabydeath.onreadystatechange = function () {
     console.log(apiDataBabydeath,111111111111);
     var count = 0;
     for  ( key in apiDataBabydeath.response ) {
-      googleGlobalDataBabydeath[count++ + 1] = [key, parseFloat(apiDataBabydeath.response[key])];
+      googleGlobalDataBabydeath[count++ + 1] = [key, apiDataBabydeath.response[key]];
     }
     console.log(googleGlobalDataBabydeath, 99999999999999);    
   }
