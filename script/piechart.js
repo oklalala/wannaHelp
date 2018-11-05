@@ -2,7 +2,6 @@
 // get piechart data
 var apiUrlBabydeath="https://open-data-220705.appspot.com/api/death_cause/2017";
 var xhrBabydeath = new XMLHttpRequest();
-var apiDataBabydeath = null;
 var googleDataBabydeath = [['reson', 'count']];
 xhrBabydeath.open('GET',apiUrlBabydeath,true);
 xhrBabydeath.send();
