@@ -1,38 +1,69 @@
+
+// // get barchart taiwan data
+// var taiwanDeathRate = "https://open-data-220705.appspot.com/api/death_rate";
+// var xhrTaiwanDeathRate = new XMLHttpRequest();
+// var taiwanDeathRateData = [['county', 'deathRate']];
+// xhrTaiwanDeathRate.open("POST", "taiwanDeathRate", true);
+// xhrTaiwanDeathRate.setRequestHeader("Content-type", "application/json");
+// xhrTaiwanDeathRate.send(JSON.stringify({
+//   type: "newborn",
+//   year: 2017
+// }));
+
+// xhrTaiwanDeathRate.onreadystatechange = function () {
+//   // console.log(this.readyState);
+//   if (this.readyState === 4 && this.status === 200) {
+//     var rowDeathRate = JSON.parse(this.responseText);
+//     // console.log(rowDeathRate, 111111111111);
+//     var count = 0;
+//     for (key in rowDeathRate.response) {
+//       taiwanDeathRateData[count++ + 1] = [key, rowDeathRate.response[key]];
+//     }
+//     // console.log(taiwanDeathRateData, 99999999999999);
+//   }
+// }
+
+// get barchart global data
+var globalDeathRate = "https://open-data-220705.appspot.com/api/global_death_rate/2016";
+var xhrGlobalDeathData = new XMLHttpRequest();
+var globalDeathData = [['Country', '死亡率']];
+xhrGlobalDeathData.open('GET', globalDeathRate, true);
+xhrGlobalDeathData.send();
+
+xhrGlobalDeathData.onreadystatechange = function () {
+  // console.log( this.readyState);
+  if (this.readyState === 4 && this.status === 200) {
+    var apiDeathData = JSON.parse(this.responseText);
+    // console.log(apiDeathData,111111111111);
+    var count = 0;
+    for (key in apiDeathData.response) {
+      var value = apiDeathData.response[key]
+      globalDeathData[count++ + 1] = [key, value];
+    }
+    // console.log(globalDeathData, 99999999999999);    
+  }
+}
+
 google.charts.load('current', { packages: ['corechart', 'bar'] });
 google.charts.setOnLoadCallback(drawMultSeries);
 
 function drawMultSeries() {
-  var data = new google.visualization.DataTable();
-  data.addColumn('timeofday', 'Time of Day');
-  data.addColumn('number', 'Motivation Level');
-
-  data.addRows([
-    [{ v: [2, 0, 0], f: '台南' }, 1],
-    [{ v: [9, 0, 0], f: '高雄' }, 2],
-    [{ v: [10, 0, 0], f: '台中' }, 3],
-    [{ v: [11, 0, 0], f: '台北' }, 4],
-    [{ v: [12, 0, 0], f: '基隆' }, 5],
-    [{ v: [13, 0, 0], f: '新北' }, 6],
-    [{ v: [14, 0, 0], f: '苗栗' }, 7],
-    [{ v: [15, 0, 0], f: '南投' }, 8],
-    [{ v: [16, 0, 0], f: '嘉義' }, 9],
-    [{ v: [17, 0, 0], f: '花蓮' }, 10],
-  ]);
+  var data = new google.visualization.arrayToDataTable(globalDeathData);
 
   var options = {
     hAxis: {
-      // title: 'Time of Day',
-      format: 'h:mm a',
-      viewWindow: {
-        min: [7, 30, 0],
-        max: [17, 30, 0]
-      }
+      // title: '世界各國'
     },
     vAxis: {
-      // title: 'Rating (scale of 1-10)'
     },
+    chartArea: {
+      top: 50,
+      weight: '90%'
+    },
+    colors: ['#ed6555'],
     backgroundColor: '#fff7e2',
-
+    legend: { position: "none" },
+    fontSize: 8
   };
 
   var chart = new google.visualization.ColumnChart(
