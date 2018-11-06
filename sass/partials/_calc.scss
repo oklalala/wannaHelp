@@ -59,12 +59,12 @@
     input {
       display: none;
       &:checked + label::before {
-        background-image: url(../img/uncheck@2x.png);
+        background-image: url(../img/check@2x.png);
       }
     }
 
     label::before {
-      background-image: url(../img/check@2x.png);
+      background-image: url(../img/uncheck@2x.png);
       background-size: cover;
       content: '';
       display: inline-block;
@@ -137,3 +137,6 @@
   }
 }
 
+.plus, .minus {
+  cursor: pointer;
+}

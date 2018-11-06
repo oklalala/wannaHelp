@@ -9,7 +9,7 @@ xhrBabydeath.send();
 xhrBabydeath.onreadystatechange = function(){
   if(this.readyState === 4 && this.status === 200){
     var apiDataBabydeath = JSON.parse(this.responseText);
-    console.log(apiDataBabydeath);
+    // console.log(apiDataBabydeath);
     for(i=0;i< apiDataBabydeath.response.length ;i++){
         googleDataBabydeath[i+1]=[apiDataBabydeath.response[i][0],parseInt(apiDataBabydeath.response[i][1])];
     }
