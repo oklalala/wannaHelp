@@ -1,63 +1,40 @@
-// $.get('https://open-data-220705.appspot.com/api/global_death_rate/2016', function (e) {
-//   console.log(e);
+// // $.get('https://open-data-220705.appspot.com/api/global_death_rate/2016', function (e) {
+// //   console.log(e);
   
-// });
+// // });
 
-// get piechart data
+// get barchart global data
 var globalDeathRate = "https://open-data-220705.appspot.com/api/global_death_rate/2016";
-var xhrGlobalBabydeath = new XMLHttpRequest();
-var googleGlobalDataBabydeath = [['county', 'deathRate']];
-xhrGlobalBabydeath.open('GET', globalDeathRate, true);
-xhrGlobalBabydeath.send();
+var xhrGlobalDeathData = new XMLHttpRequest();
+var globalDeathData = [['Country', 'DeathRate']];
+xhrGlobalDeathData.open('GET', globalDeathRate, true);
+xhrGlobalDeathData.send();
 
-xhrGlobalBabydeath.onreadystatechange = function () {
+xhrGlobalDeathData.onreadystatechange = function () {
   console.log( this.readyState);
   if (this.readyState === 4 && this.status === 200) {
-    var apiDataBabydeath = JSON.parse(this.responseText);
-    console.log(apiDataBabydeath,111111111111);
+    var apiDeathData = JSON.parse(this.responseText);
+    console.log(apiDeathData,111111111111);
     var count = 0;
-    for  ( key in apiDataBabydeath.response ) {
-      googleGlobalDataBabydeath[count++ + 1] = [key, apiDataBabydeath.response[key]];
+    for  ( key in apiDeathData.response ) {
+      globalDeathData[count++ +1] = [key, apiDeathData.response[key]];
     }
-    console.log(googleGlobalDataBabydeath, 99999999999999);    
+    console.log(globalDeathData, 99999999999999);    
   }
 }
 
 
-google.charts.load('current', { packages: ['corechart', 'bar'] });
-google.charts.setOnLoadCallback(drawMultSeries);
+google.charts.load('current', { packages: ['corechart','bar'] });
+google.charts.setOnLoadCallback(drawBarChart);
 
-function drawMultSeries() {
-  var data = new google.visualization.DataTable();
-  data.addColumn('timeofday', 'Time of Day');
-  data.addColumn('number', 'Motivation Level');
-  data.addColumn('number', 'Energy Level');
-
-  data.addRows([
-    [{ v: [8, 0, 0], f: '8 am' }, 1, .25],
-    [{ v: [9, 0, 0], f: '9 am' }, 2, .5],
-    [{ v: [10, 0, 0], f: '10 am' }, 3, 1],
-    [{ v: [11, 0, 0], f: '11 am' }, 4, 2.25],
-    [{ v: [12, 0, 0], f: '12 pm' }, 5, 2.25],
-    [{ v: [13, 0, 0], f: '1 pm' }, 6, 3],
-    [{ v: [14, 0, 0], f: '2 pm' }, 7, 4],
-    [{ v: [15, 0, 0], f: '3 pm' }, 8, 5.25],
-    [{ v: [16, 0, 0], f: '4 pm' }, 9, 7.5],
-    [{ v: [17, 0, 0], f: '5 pm' }, 10, 10],
-  ]);
+function drawBarChart() {
+  var data = new google.visualization.arrayToDataTable(globalDeathData);
 
   var options = {
-    title: 'Motivation and Energy Level Throughout the Day',
     hAxis: {
-      title: 'Time of Day',
-      format: 'h:mm a',
-      viewWindow: {
-        min: [7, 30, 0],
-        max: [17, 30, 0]
-      }
+      title: '世界各國'
     },
     vAxis: {
-      title: 'Rating (scale of 1-10)'
     }
   };
 
