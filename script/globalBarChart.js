@@ -1,3 +1,29 @@
+// $.get('https://open-data-220705.appspot.com/api/global_death_rate/2016', function (e) {
+//   console.log(e);
+  
+// });
+
+// get piechart data
+var globalDeathRate = "https://open-data-220705.appspot.com/api/global_death_rate/2016";
+var xhrGlobalBabydeath = new XMLHttpRequest();
+var googleGlobalDataBabydeath = [['county', 'deathRate']];
+xhrGlobalBabydeath.open('GET', globalDeathRate, true);
+xhrGlobalBabydeath.send();
+
+xhrGlobalBabydeath.onreadystatechange = function () {
+  console.log( this.readyState);
+  if (this.readyState === 4 && this.status === 200) {
+    var apiDataBabydeath = JSON.parse(this.responseText);
+    console.log(apiDataBabydeath,111111111111);
+    var count = 0;
+    for  ( key in apiDataBabydeath.response ) {
+      googleGlobalDataBabydeath[count++ + 1] = [key, parseFloat(apiDataBabydeath.response[key])];
+    }
+    console.log(googleGlobalDataBabydeath, 99999999999999);    
+  }
+}
+
+
 google.charts.load('current', { packages: ['corechart', 'bar'] });
 google.charts.setOnLoadCallback(drawMultSeries);
 
