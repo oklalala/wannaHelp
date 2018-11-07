@@ -11,15 +11,15 @@ xhrGlobalBabydeath.open('GET', globalDeathRate, true);
 xhrGlobalBabydeath.send();
 
 xhrGlobalBabydeath.onreadystatechange = function () {
-  console.log( this.readyState);
+  // console.log( this.readyState);
   if (this.readyState === 4 && this.status === 200) {
     var apiDataBabydeath = JSON.parse(this.responseText);
-    console.log(apiDataBabydeath,111111111111);
+    // console.log(apiDataBabydeath,111111111111);
     var count = 0;
     for  ( key in apiDataBabydeath.response ) {
       googleGlobalDataBabydeath[count++ + 1] = [key, parseFloat(apiDataBabydeath.response[key])];
     }
-    console.log(googleGlobalDataBabydeath, 99999999999999);    
+    // console.log(googleGlobalDataBabydeath, 99999999999999);    
   }
 }
 

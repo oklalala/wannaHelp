@@ -20,7 +20,7 @@ var pageType = null;
 var onethingdo = null;
 
 function pagemove() {
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
   var current = null;
   // var pageType = null;
   //現在是否有對象正在移動，有的話先別觸發其他的
