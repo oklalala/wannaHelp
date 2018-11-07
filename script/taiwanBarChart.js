@@ -1,46 +1,30 @@
 
-// // get barchart taiwan data
-// var taiwanDeathRate = "https://open-data-220705.appspot.com/api/death_rate";
-// var xhrTaiwanDeathRate = new XMLHttpRequest();
-// var taiwanDeathRateData = [['county', 'deathRate']];
-// xhrTaiwanDeathRate.open("POST", "taiwanDeathRate", true);
-// xhrTaiwanDeathRate.setRequestHeader("Content-type", "application/json");
-// xhrTaiwanDeathRate.send(JSON.stringify({
-//   type: "newborn",
-//   year: 2017
-// }));
+// get barchart taiwan data
+var taiwanDeathRate = "http://745ff6fe.ngrok.io/api/death_rate";
+var xhrTaiwanDeathRate = new XMLHttpRequest();
+var taiwanDeathRateData = [['county', 'deathRate']];
+xhrTaiwanDeathRate.open("POST", taiwanDeathRate);
+xhrTaiwanDeathRate.setRequestHeader("Content-type", "application/json");
+xhrTaiwanDeathRate.setRequestHeader("Access-Control-Allow-Origin", "*");
+xhrTaiwanDeathRate.setRequestHeader("Access-Control-Request-Method", "POST");
+xhrTaiwanDeathRate.send(JSON.stringify({
+  type: "newborn",
+  year: 2017
+}));
 
-// xhrTaiwanDeathRate.onreadystatechange = function () {
-//   // console.log(this.readyState);
-//   if (this.readyState === 4 && this.status === 200) {
-//     var rowDeathRate = JSON.parse(this.responseText);
-//     // console.log(rowDeathRate, 111111111111);
-//     var count = 0;
-//     for (key in rowDeathRate.response) {
-//       taiwanDeathRateData[count++ + 1] = [key, rowDeathRate.response[key]];
-//     }
-//     // console.log(taiwanDeathRateData, 99999999999999);
-//   }
-// }
-
-// get barchart global data
-var globalDeathRate = "https://open-data-220705.appspot.com/api/global_death_rate/2016";
-var xhrGlobalDeathData = new XMLHttpRequest();
-var globalDeathData = [['Country', '死亡率']];
-xhrGlobalDeathData.open('GET', globalDeathRate, true);
-xhrGlobalDeathData.send();
-
-xhrGlobalDeathData.onreadystatechange = function () {
-  // console.log( this.readyState);
+xhrTaiwanDeathRate.onreadystatechange = function () {
+  console.log(this.readyState);
+  console.log(this.status);
   if (this.readyState === 4 && this.status === 200) {
-    var apiDeathData = JSON.parse(this.responseText);
-    // console.log(apiDeathData,111111111111);
+    var rowDeathRate = JSON.parse(this.responseText);
+    console.log(rowDeathRate, 111111111111);
     var count = 0;
-    for (key in apiDeathData.response) {
-      var value = apiDeathData.response[key]
-      globalDeathData[count++ + 1] = [key, value];
+    for (key in rowDeathRate.data) {
+      console.log(key);
+      console.log(rowDeathRate.data[key]);
+      taiwanDeathRateData[count++ + 1] = [key, rowDeathRate.data[key]];
     }
-    // console.log(globalDeathData, 99999999999999);    
+    console.log(taiwanDeathRateData.pop(), 99999999999999);
   }
 }
 
@@ -48,7 +32,7 @@ google.charts.load('current', { packages: ['corechart', 'bar'] });
 google.charts.setOnLoadCallback(drawMultSeries);
 
 function drawMultSeries() {
-  var data = new google.visualization.arrayToDataTable(globalDeathData);
+  var data = new google.visualization.arrayToDataTable(taiwanDeathRateData);
 
   var options = {
     hAxis: {
