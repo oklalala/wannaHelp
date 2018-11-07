@@ -1,7 +1,7 @@
 // get barchart taiwan data
 var taiwanDeathRate = "https://open-data-220705.appspot.com/api/death_rate";
 var xhrTaiwanDeathRate = new XMLHttpRequest();
-var taiwanDeathRateData = [['county', 'deathRate']];
+var taiwanDeathRateData = [['county', '死亡率']];
 xhrTaiwanDeathRate.open("POST", taiwanDeathRate);
 xhrTaiwanDeathRate.setRequestHeader("Content-type", "application/json");
 xhrTaiwanDeathRate.send(JSON.stringify({
