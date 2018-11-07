@@ -167,12 +167,8 @@
   &__description {
     @extend %description__display;
     margin-bottom: 20px;
-    padding:0 30px;
   }
-  img {
-    width: 135px;
-    height: 135px;
-  }
+
   &__items{
     display: flex;
     flex-wrap: wrap;
@@ -183,6 +179,15 @@
     width: 50%;
     font-size: 15px;
     margin-top: 50px;
+  }
+  img {
+    width: 135px;
+    height: 135px;
+  }
+  &__hint{
+    padding: 0 30px;
+    font-size: 15px;
+    line-height: 24px;
   }
 }
 
@@ -238,9 +243,10 @@
         line-height: 30px;
       }
     }
-   
   }
 } 
+
+
 
 .food{
   @include cards(60px,170px);
@@ -252,6 +258,7 @@
     }
     h3 {
       font-size: 17px;
+      font-weight: bold;
     }
   }
 }
