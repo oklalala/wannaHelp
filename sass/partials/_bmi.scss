@@ -5,7 +5,10 @@
   @extend %container--fixed;
   border-bottom: none;
   height: auto;
-  padding-top: 120px;
+  padding-top: 50px;
+  &:first-child{
+    padding-top: 120px;
+  }
 }
 .bmi__intro{
   @extend %answer__title__template;
@@ -153,61 +156,105 @@
 }
 
 
-
+.food{
+  color: $hot__color;
+  padding-bottom: 30px;
+  &__title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  &__description {
+    @extend %description__display;
+    margin-bottom: 20px;
+    padding:0 30px;
+  }
+  img {
+    width: 135px;
+    height: 135px;
+  }
+  &__items{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    font-size: 15px;
+    margin-top: 50px;
+  }
+}
 
  /* Style the tab */
 .tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: $background__color;
-  color: $hot__color;
-}
+  width: 660px;
+  margin: 0px auto 20px;
+  border-radius: 18px ;
+  background-color: $label__background__color;
+  text-align: center;
 
-/* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: $background__color;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: $hot__color;
-  color: $background__color;
+  &links {
+    border: none;
+    border-radius: 18px;
+    padding: 6px 24px;
+    background-color: $label__background__color;
+    cursor: pointer;
+    font-size: 17px;
+    color: $hot__color;
+    transition: 0.3s;
+    &:hover {
+      background-color: $hot__color;
+      color: $label__background__color;
+      transition: 0.3s;
+    }
+    &.active {
+      background-color: $hot__color;
+      color: $label__background__color;
+    }
+  }
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+  padding: 40px 80px;
+  color:$hot__color;
+  &.active {
+    display: block;
+  }
+  .column__half{
+    width: 60%;
+    &:first-child{
+      width: 40%;
+      padding-right: 40px;
+      p {
+        background-color: $label__background__color;
+        border-radius: 10px;
+        padding: 14px 20px 18px;
+        
+        color: $label__font__color;
+        font-size: 15px;
+        line-height: 30px;
+      }
+    }
+   
+  }
 } 
 
-#second__period{
-  .food__cards{
-    display: flex;
-  }
-
-  .food__card{
-    width: 40%;
-    img {
-    width: 170px;
+.food{
+  @include cards(60px,170px);
+  &__card {
+    text-align: center;
+    width: 47%;
+    &:nth-child(2n) {
+      margin-right: 0px;
     }
-
+    h3 {
+      font-size: 17px;
+    }
   }
 }
 
 
-.tabcontent.active {
-  display: block;
-}
+

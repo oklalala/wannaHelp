@@ -44,7 +44,7 @@ reference.addEventListener('click', openLinks);
 
 
 // period change tab in bmi section
-function openCity(evt, cityName) {
+function openCity(evt, period) {
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -61,6 +61,6 @@ function openCity(evt, cityName) {
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(period).style.display = "block";
     evt.currentTarget.className += " active";
 } 
