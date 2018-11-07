@@ -1,16 +1,27 @@
 //short page
 const sectionHome = document.querySelectorAll('section')[0];
 const sectionIntro = document.querySelectorAll('section')[1];
-const sectionQuestionBaby = document.querySelectorAll('section')[2];
-const sectionQuestionPregnancy = document.querySelectorAll('section')[4];
-const sectionQuestionCost = document.querySelectorAll('section')[7];
+const sectionQuestionCost = document.querySelectorAll('section')[2];
+const sectionQuestionPregnancy = document.querySelectorAll('section')[5];
+const sectionQuestionBaby = document.querySelectorAll('section')[8];
+
+
+// const sectionQuestionBaby = document.querySelectorAll('section')[2];
+// const sectionQuestionPregnancy = document.querySelectorAll('section')[4];
+// const sectionQuestionCost = document.querySelectorAll('section')[7];
 
 //long page
-const sectionBmi = document.querySelectorAll('section')[3];
-const sectionDeath = document.querySelectorAll('section')[5];
-const sectionSafety = document.querySelectorAll('section')[6];
-const sectionCalc = document.querySelectorAll('section')[8];
-const sectioncalcResult = document.querySelectorAll('section')[9];
+const sectionCalc = document.querySelectorAll('section')[3];
+const sectioncalcResult = document.querySelectorAll('section')[4];
+const sectionDeath = document.querySelectorAll('section')[6];
+const sectionSafety = document.querySelectorAll('section')[7];
+const sectionBmi = document.querySelectorAll('section')[9];
+
+// const sectionBmi = document.querySelectorAll('section')[3];
+// const sectionDeath = document.querySelectorAll('section')[5];
+// const sectionSafety = document.querySelectorAll('section')[6];
+// const sectionCalc = document.querySelectorAll('section')[8];
+// const sectioncalcResult = document.querySelectorAll('section')[9];
 
 //100vh
 const fullVh = sectionHome.clientHeight;
@@ -20,7 +31,6 @@ var pageType = null;
 var onethingdo = null;
 
 function pagemove() {
-  // console.log(window.scrollY);
   var current = null;
   // var pageType = null;
   //現在是否有對象正在移動，有的話先別觸發其他的
