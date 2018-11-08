@@ -25,8 +25,7 @@ function sendPost(type, year){
   }
   return taiwanDeathRateData;
 }
-var initialData = sendPost("infant", 2017)
-
+// sendPost("infant", 2017)
 // google.charts.load('current', { packages: ['corechart', 'bar'] });
 // google.charts.setOnLoadCallback(drawMultSeries(initialData));
 
@@ -58,13 +57,13 @@ function drawMultSeries(setData) {
 function getCountry() {
   //  讀取radio的值
   var form = document.getElementById("form_name");
-  for (var i = 0; i < form.language.length; i++) {
-    if (form.language[i].checked) {
-      var language = form.language[i].value;
-      console.log(language);
+  for (var i = 0; i < form.year.length; i++) {
+    if (form.year[i].checked) {
+      var year = form.year[i].value;
+      console.log(year);
     }
   }
-  return renewDraw("infant",language);
+  return renewDraw("infant",year);
 }
 
 // 把圖重新畫
@@ -73,4 +72,7 @@ function renewDraw(type, year) {
   console.log( data , "this is data");
   google.charts.load('current', { packages: ['corechart', 'bar'] });
   google.charts.setOnLoadCallback(drawMultSeries(data));
+  // drawMultSeries(data);
 }
+
+// renewDraw("infant",2017);
