@@ -1,9 +1,35 @@
+function getCountry() {
+  //  讀取radio的值
+  var form = document.getElementById("form_name");
+  for (var i = 0; i < form.language.length; i++) {
+    if (form.language[i].checked) {
+      var language = form.language[i].value;
+      console.log(language);
+    }
+  }
+  return language;
+}
+
+function renewDraw(type,year) {
+  sendPost(type, year);
+  xhrTaiwanDeathRate.onreadystatechange();
+  drawMultSeries();
+}
+
+function sendPost(type, year){
+  xhrTaiwanDeathRate.send(JSON.stringify({
+    type: type,
+    year: year
+  }))
+}
+
 // get barchart taiwan data
 var taiwanDeathRate = "https://open-data-220705.appspot.com/api/death_rate";
 var xhrTaiwanDeathRate = new XMLHttpRequest();
 var taiwanDeathRateData = [['county', '死亡率']];
-xhrTaiwanDeathRate.open("POST", taiwanDeathRate);
+xhrTaiwanDeathRate.open("POST", taiwanDeathRate, true);
 xhrTaiwanDeathRate.setRequestHeader("Content-type", "application/json");
+
 xhrTaiwanDeathRate.send(JSON.stringify({
   type: "newborn",
   year: 2017
@@ -20,6 +46,7 @@ xhrTaiwanDeathRate.onreadystatechange = function () {
     console.log(taiwanDeathRateData.pop(), 99999999999999);
   }
 }
+
 
 google.charts.load('current', { packages: ['corechart', 'bar'] });
 google.charts.setOnLoadCallback(drawMultSeries);
