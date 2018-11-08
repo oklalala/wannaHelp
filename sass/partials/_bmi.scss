@@ -5,7 +5,10 @@
   @extend %container--fixed;
   border-bottom: none;
   height: auto;
-  padding-top: 120px;
+  padding-top: 50px;
+  &:first-child{
+    padding-top: 120px;
+  }
 }
 .bmi__intro{
   @extend %answer__title__template;
@@ -151,3 +154,114 @@
     }
   }
 }
+
+
+.food{
+  color: $hot__color;
+  padding-bottom: 30px;
+  &__title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  &__description {
+    @extend %description__display;
+    margin-bottom: 20px;
+  }
+
+  &__items{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    font-size: 15px;
+    margin-top: 50px;
+  }
+  img {
+    width: 135px;
+    height: 135px;
+  }
+  &__hint{
+    padding: 0 30px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+ /* Style the tab */
+.tab {
+  width: 660px;
+  margin: 0px auto 20px;
+  border-radius: 18px ;
+  background-color: $label__background__color;
+  text-align: center;
+
+  &links {
+    border: none;
+    border-radius: 18px;
+    padding: 6px 24px;
+    background-color: $label__background__color;
+    cursor: pointer;
+    font-size: 17px;
+    color: $hot__color;
+    transition: 0.3s;
+    &:hover {
+      background-color: $hot__color;
+      color: $label__background__color;
+      transition: 0.3s;
+    }
+    &.active {
+      background-color: $hot__color;
+      color: $label__background__color;
+    }
+  }
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 40px 80px;
+  color:$hot__color;
+  &.active {
+    display: block;
+  }
+  .column__half{
+    width: 60%;
+    &:first-child{
+      width: 40%;
+      padding-right: 40px;
+      p {
+        background-color: $label__background__color;
+        border-radius: 10px;
+        padding: 14px 20px 18px;
+        
+        color: $label__font__color;
+        font-size: 15px;
+        line-height: 30px;
+      }
+    }
+  }
+} 
+
+
+
+.food{
+  @include cards(60px,170px);
+  &__card {
+    text-align: center;
+    width: 47%;
+    &:nth-child(2n) {
+      margin-right: 0px;
+    }
+    h3 {
+      font-size: 17px;
+      font-weight: bold;
+    }
+  }
+}
+
+
+
