@@ -1,5 +1,6 @@
 #calc{
   background-color: #fff7e2;
+  padding-bottom: 100px;
 }
 .calc__container{
   @extend %container--fixed;
@@ -21,6 +22,12 @@
   width: 50%;
   &__period{
     margin-bottom: 50px;
+    &:last-child {
+      margin-bottom: 0;
+      .cost__period__item {
+        margin-bottom: 0;
+      }
+    }
     &__title{
       font-size: 24px;
       font-weight: 500;

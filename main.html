@@ -67,160 +67,149 @@
   <section id="calc">
     <div class="calc__container">
       <div class="calc__intro">
-        <div class="calc__intro__title">
-          <img src="./img/calculator@2x.png" alt="">
-          <span>媽媽的計算機</span>
-        </div>
+        <div class="calc__intro__title"><img src="./img/calculator@2x.png" alt=""><span>媽媽的計算機</span></div>
         <div class="calc__intro__description">我們將生小孩的花費分成懷孕前、懷孕中、生產時、寶寶產後的必要支出與非必要支出一一列出來，你可以依照自己的需求來增減項目，所有的項目總花費都會幫你統計在畫面右邊的計算機裡。</div>
       </div>
       <div class="total">
         <div class="total__title">媽媽的計算機</div>
-        <div class="total__amount">NTD 14,000</div>
+        <div class="total__amount">NTD <span class="sub-total">0</span></div>
       </div>
       <div class="cost">
         <div class="cost__period">
-          <div class="cost__period__title">懷孕前的花費
-            <span>＊星星符號為必要</span>
+        <div class="cost__period__title">懷孕前的花費<span>＊星星符號為必要</span></div>
+        <ul class="cost__period__items">
+          <li class="cost__period__item">
+            <div class="star">＊</div>
+            <div class="cost__period__item__checkbox">
+              <input type="checkbox" id="check0">
+              <label for="check0"></label>
+            </div>
+            <div class="description">產檢</div>
+            <div class="quantity">
+              <span class="minus">–</span>
+              <span class="count"> 1 </span>
+              <span class="plus">＋</span>
+            </div>
+            <div class="amount">NTD <span class="item-total">1500</span></div>
+          </li>
+          <li class="cost__period__item">
+            <ul class="cost__period__item__expand">
+              <li class="cost__period__item__expand__list">
+                <div class="star"></div>
+                <div class="cost__period__item__checkbox expand">
+                  <input type="checkbox" id="check1">
+                  <label for="check1"></label>
+                </div>
+                <span class="description">自費產檢</span>
+              </li>
+              <li class="cost__period__item__expand__list">
+                <div class="star"></div>
+                <div class="cost__period__item__checkbox">
+                  <input type="checkbox" id="check11">
+                  <label for="check11"></label>
+                </div>
+                <div class="description">脊髓性肌肉萎縮症基因篩檢</div>
+                <div class="quantity">
+                  <span class="minus">–</span>
+                  <span class="count"> 1 </span>
+                  <span class="plus">＋</span>
+                </div>
+                <div class="amount">NTD <span class="item-total">1500</span></div>
+              </li>
+              <li class="cost__period__item__expand__list">
+                <div class="star"></div>
+                <div class="cost__period__item__checkbox">
+                  <input type="checkbox" id="check12">
+                  <label for="check12"></label>
+                </div>
+                <div class="description">X染色體脆折症候群</div>
+                <div class="quantity">
+                  <span class="minus">–</span>
+                  <span class="count"> 1 </span>
+                  <span class="plus">＋</span>
+                </div>
+                <div class="amount">NTD <span class="item-total">1500</span></div>
+              </li>
+              <li class="cost__period__item__expand__list">
+                <div class="star"></div>
+                <div class="cost__period__item__checkbox">
+                  <input type="checkbox" id="check13">
+                  <label for="check13"></label>
+                </div>
+                <div class="description">子癲前症(妊娠毒血症)高危險群篩檢</div>
+                <div class="quantity">
+                  <span class="minus">–</span>
+                  <span class="count"> 1 </span>
+                  <span class="plus">＋</span>
+                </div>
+                <div class="amount">NTD <span class="item-total">1500</span></div>
+              </li>
+              <li class="cost__period__item__expand__list">
+                <div class="star"></div>
+                <div class="cost__period__item__checkbox">
+                  <input type="checkbox" id="check14">
+                  <label for="check14"></label>
+                </div>
+                <div class="description">第一孕期唐氏症篩檢(初唐)─頸部透明帶檢查</div>
+                <div class="quantity">
+                  <span class="minus">–</span>
+                  <span class="count"> 1 </span>
+                  <span class="plus">＋</span>
+                </div>
+                <div class="amount">NTD <span class="item-total">1500</span></div>
+              </li>
+              <li class="cost__period__item__expand__list">
+                <div class="star"></div>
+                <div class="cost__period__item__checkbox">
+                  <input type="checkbox" id="check15">
+                  <label for="check15"></label>
+                </div>
+                <div class="description">第二孕期唐氏症篩檢(中唐)</div>
+                <div class="quantity">
+                  <span class="minus">–</span>
+                  <span class="count"> 1 </span>
+                  <span class="plus">＋</span>
+                </div>
+                <div class="amount">NTD <span class="item-total">1500</span></div>
+              </li>
+              <li class="cost__period__item__expand__list">
+                <div class="star"></div>
+                <div class="cost__period__item__checkbox">
+                  <input type="checkbox" id="check16">
+                  <label for="check16"></label>
+                </div>
+                <div class="description">非侵入式唐氏症篩檢(NIFTY)</div>
+                <div class="quantity">
+                  <span class="minus">–</span>
+                  <span class="count"> 1 </span>
+                  <span class="plus">＋</span>
+                </div>
+                <div class="amount">NTD <span class="item-total">1500</span></div>
+              </li>
+            </ul>
+          </li>
+          <div class="cost__period__item__referance">
+            <a href="">各項自費產檢介紹</a>
           </div>
-          <ul class="cost__period__items">
-            <li class="cost__period__item">
-              <div class="star">＊</div>
-              <div class="cost__period__item__checkbox">
-                <input type="checkbox" id="check0">
-                <label for="check0"></label>
-              </div>
-              <div class="description">產檢</div>
-              <div class="quantity">
-                <span>–</span>
-                <span>1</span>
-                <span>＋</span>
-              </div>
-              <div class="amount">NTD 1500</div>
-            </li>
-            <li class="cost__period__item">
-              <ul class="cost__period__item__expand">
-                <li class="cost__period__item__expand__list">
-                  <div class="star"></div>
-                  <div class="cost__period__item__checkbox expand">
-                    <input type="checkbox" id="check1">
-                    <label for="check1"></label>
-                  </div>
-                  <span class="description">自費產檢</span>
-                  <div class="quantity">
-                    <span>–</span>
-                    <span>1</span>
-                    <span>＋</span>
-                  </div>
-                  <span class="amount">NTD 1500</span>
-                </li>
-                <li class="cost__period__item__expand__list">
-                  <div class="star"></div>
-                  <div class="cost__period__item__checkbox">
-                    <input type="checkbox" id="check11">
-                    <label for="check11"></label>
-                  </div>
-                  <div class="description">脊髓性肌肉萎縮症基因篩檢</div>
-                  <div class="quantity">
-                    <span>–</span>
-                    <span>1</span>
-                    <span>＋</span>
-                  </div>
-                  <div class="amount">NTD 1500</div>
-                </li>
-                <li class="cost__period__item__expand__list">
-                  <div class="star"></div>
-                  <div class="cost__period__item__checkbox">
-                    <input type="checkbox" id="check12">
-                    <label for="check12"></label>
-                  </div>
-                  <div class="description">X染色體脆折症候群</div>
-                  <div class="quantity">
-                    <span>–</span>
-                    <span>1</span>
-                    <span>＋</span>
-                  </div>
-                  <div class="amount">NTD 1500</div>
-                </li>
-                <li class="cost__period__item__expand__list">
-                  <div class="star"></div>
-                  <div class="cost__period__item__checkbox">
-                    <input type="checkbox" id="check13">
-                    <label for="check13"></label>
-                  </div>
-                  <div class="description">子癲前症(妊娠毒血症)高危險群篩檢</div>
-                  <div class="quantity">
-                    <span>–</span>
-                    <span>1</span>
-                    <span>＋</span>
-                  </div>
-                  <div class="amount">NTD 1500</div>
-                </li>
-                <li class="cost__period__item__expand__list">
-                  <div class="star"></div>
-                  <div class="cost__period__item__checkbox">
-                    <input type="checkbox" id="check14">
-                    <label for="check14"></label>
-                  </div>
-                  <div class="description">第一孕期唐氏症篩檢(初唐)─頸部透明帶檢查</div>
-                  <div class="quantity">
-                    <span>–</span>
-                    <span>1</span>
-                    <span>＋</span>
-                  </div>
-                  <div class="amount">NTD 1500</div>
-                </li>
-                <li class="cost__period__item__expand__list">
-                  <div class="star"></div>
-                  <div class="cost__period__item__checkbox">
-                    <input type="checkbox" id="check15">
-                    <label for="check15"></label>
-                  </div>
-                  <div class="description">第二孕期唐氏症篩檢(中唐)</div>
-                  <div class="quantity">
-                    <span>–</span>
-                    <span>1</span>
-                    <span>＋</span>
-                  </div>
-                  <div class="amount">NTD 1500</div>
-                </li>
-                <li class="cost__period__item__expand__list">
-                  <div class="star"></div>
-                  <div class="cost__period__item__checkbox">
-                    <input type="checkbox" id="check16">
-                    <label for="check16"></label>
-                  </div>
-                  <div class="description">非侵入式唐氏症篩檢(NIFTY)</div>
-                  <div class="quantity">
-                    <span>–</span>
-                    <span>1</span>
-                    <span>＋</span>
-                  </div>
-                  <div class="amount">NTD 1500</div>
-                </li>
-              </ul>
-            </li>
-            <div class="cost__period__item__referance">
-              <a href="">各項自費產檢介紹</a>
-            </div>
 
-            <li class="cost__period__item">
-              <div class="star">＊</div>
-              <div class="cost__period__item__checkbox">
-                <input type="checkbox" id="check2">
-                <label for="check2"></label>
-              </div>
-              <div class="description">營養品</div>
-              <div class="quantity">
-                <span>–</span>
-                <span>1</span>
-                <span>＋</span>
-              </div>
-              <div class="amount">NTD 1500</div>
-            </li>
-            <div class="cost__period__item__referance">
-              <a href="">各營養品介紹</a>
+          <li class="cost__period__item">
+            <div class="star">＊</div>
+            <div class="cost__period__item__checkbox">
+              <input type="checkbox" id="check2">
+              <label for="check2"></label>
             </div>
-          </ul>
+            <div class="description">營養品</div>
+            <div class="quantity">
+              <span class="minus">–</span>
+              <span class="count"> 1 </span>
+              <span class="plus">＋</span>
+            </div>
+            <div class="amount">NTD <span class="item-total">1500</span></div>
+          </li>
+          <div class="cost__period__item__referance">
+            <a href="">各營養品介紹</a>
+          </div>
+        </ul>
         </div>
 
         <div class="cost__period">
@@ -236,11 +225,11 @@
               </div>
               <div class="description">孕婦裝</div>
               <div class="quantity">
-                <span>–</span>
-                <span>1</span>
-                <span>＋</span>
+                <span class="minus">–</span>
+                <span class="count"> 1 </span>
+                <span class="plus">＋</span>
               </div>
-              <div class="amount">NTD 1500</div>
+              <div class="amount">NTD <span class="item-total">1500</span></div>
             </li>
             <li class="cost__period__item">
               <div class="star">＊</div>
@@ -250,19 +239,20 @@
               </div>
               <div class="description">孕婦褲</div>
               <div class="quantity">
-                <span>–</span>
-                <span>1</span>
-                <span>＋</span>
+                <span class="minus">–</span>
+                <span class="count"> 1 </span>
+                <span class="plus">＋</span>
               </div>
-              <div class="amount">NTD 1500</div>
+              <div class="amount">NTD <span class="item-total">1500</span></div>
             </li>
           </ul>
-          <div class="cost__period__title">生產時的花費
-            <span>＊星星符號為必要</span>
-          </div>
+          
         </div>
 
         <div class="cost__period">
+          <div class="cost__period__title">生產時的花費
+            <span>＊星星符號為必要</span>
+          </div>
           <ul class="cost__period__items">
             <li class="cost__period__item">
               <div class="star">＊</div>
@@ -272,11 +262,11 @@
               </div>
               <div class="description">自然產</div>
               <div class="quantity">
-                <span>–</span>
-                <span>1</span>
-                <span>＋</span>
+                <span class="minus">–</span>
+                <span class="count"> 1 </span>
+                <span class="plus">＋</span>
               </div>
-              <div class="amount">NTD 1500</div>
+              <div class="amount">NTD <span class="item-total">1500</span></div>
             </li>
           </ul>
         </div>
@@ -287,9 +277,7 @@
 
   <section id="calcResult">
     <div class="calcResult__container">
-      <div class="calc__result__title">你生小孩所需要的花費約為
-        <span class="total-amount">NTD 14,000</span>
-      </div>
+      <div class="calc__result__title">你生小孩所需要的花費約為 <span class="total-amount">NTD <span class="sub-total">0</span></span></div>
       <div class="calc__result__subtitle">現在你已經知道了所有的花費，我知道，看起來實在很多，所以政府在很多地方都有補助，可以讓媽媽們少點負擔，以下我們也會列出所有可以減免或是補助的項目，你可以依照自己的需求來選擇，我們會幫你在總額裡扣除。</div>
       <ul class="subsidy">
         <li class="subsidy__item">
@@ -298,8 +286,7 @@
             <label for="item0"></label>
           </div>
           <div class="subsidy-text">
-            <div class="subsidy__item__title">乙型鏈球菌篩檢補助</div>
-            <div class="subsidy__item__ammount">NTD <span class="subsidy-amount">500</span></div>
+            <div class="subsidy__item__title">乙型鏈球菌篩檢補助</div><div class="subsidy__item__ammount">NTD <span class="subsidy-amount">500</span></div>
             <div class="subsidy__item__intro">接受本方案之孕婦乙型鏈球菌篩檢服務者，應由採集/檢查之特約醫事服務機構予以充分解說、諮詢有關孕婦乙型鏈球菌篩檢之相關重要資訊及填寫個案檢查資料。經濟弱勢之孕婦乙型鏈球菌篩檢服務，不得再收取差額。</div>
           </div>
         </li>
@@ -309,8 +296,7 @@
             <label for="item1"></label>
           </div>
           <div class="subsidy-text">
-            <div class="subsidy__item__title">乙型鏈球菌篩檢補助</div>
-            <div class="subsidy__item__ammount">NTD <span class="subsidy-amount">500</span></div>
+            <div class="subsidy__item__title">乙型鏈球菌篩檢補助</div><div class="subsidy__item__ammount">NTD <span class="subsidy-amount">500</span></div>
             <div class="subsidy__item__intro">接受本方案之孕婦乙型鏈球菌篩檢服務者，應由採集/檢查之特約醫事服務機構予以充分解說、諮詢有關孕婦乙型鏈球菌篩檢之相關重要資訊及填寫個案檢查資料。經濟弱勢之孕婦乙型鏈球菌篩檢服務，不得再收取差額。</div>
           </div>
         </li>
@@ -320,8 +306,7 @@
             <label for="item2"></label>
           </div>
           <div class="subsidy-text">
-            <div class="subsidy__item__title">乙型鏈球菌篩檢補助</div>
-            <div class="subsidy__item__ammount">NTD <span class="subsidy-amount">500</span></div>
+            <div class="subsidy__item__title">乙型鏈球菌篩檢補助</div><div class="subsidy__item__ammount">NTD <span class="subsidy-amount">500</span></div>
             <div class="subsidy__item__intro">接受本方案之孕婦乙型鏈球菌篩檢服務者，應由採集/檢查之特約醫事服務機構予以充分解說、諮詢有關孕婦乙型鏈球菌篩檢之相關重要資訊及填寫個案檢查資料。經濟弱勢之孕婦乙型鏈球菌篩檢服務，不得再收取差額。</div>
           </div>
         </li>
@@ -331,8 +316,7 @@
             <label for="item3"></label>
           </div>
           <div class="subsidy-text">
-            <div class="subsidy__item__title">乙型鏈球菌篩檢補助</div>
-            <div class="subsidy__item__ammount">NTD <span class="subsidy-amount">500</span></div>
+            <div class="subsidy__item__title">乙型鏈球菌篩檢補助</div><div class="subsidy__item__ammount">NTD <span class="subsidy-amount">500</span></div>
             <div class="subsidy__item__intro">接受本方案之孕婦乙型鏈球菌篩檢服務者，應由採集/檢查之特約醫事服務機構予以充分解說、諮詢有關孕婦乙型鏈球菌篩檢之相關重要資訊及填寫個案檢查資料。經濟弱勢之孕婦乙型鏈球菌篩檢服務，不得再收取差額。</div>
           </div>
         </li>
@@ -342,8 +326,7 @@
             <label for="item4"></label>
           </div>
           <div class="subsidy-text">
-            <div class="subsidy__item__title">乙型鏈球菌篩檢補助</div>
-            <div class="subsidy__item__ammount">NTD <span class="subsidy-amount">500</span></div>
+            <div class="subsidy__item__title">乙型鏈球菌篩檢補助</div><div class="subsidy__item__ammount">NTD <span class="subsidy-amount">500</span></div>
             <div class="subsidy__item__intro">接受本方案之孕婦乙型鏈球菌篩檢服務者，應由採集/檢查之特約醫事服務機構予以充分解說、諮詢有關孕婦乙型鏈球菌篩檢之相關重要資訊及填寫個案檢查資料。經濟弱勢之孕婦乙型鏈球菌篩檢服務，不得再收取差額。</div>
           </div>
         </li>
@@ -353,8 +336,7 @@
             <label for="item5"></label>
           </div>
           <div class="subsidy-text">
-            <div class="subsidy__item__title">乙型鏈球菌篩檢補助</div>
-            <div class="subsidy__item__ammount">NTD <span class="subsidy-amount">500</span></div>
+            <div class="subsidy__item__title">乙型鏈球菌篩檢補助</div><div class="subsidy__item__ammount">NTD <span class="subsidy-amount">500</span></div>
             <div class="subsidy__item__intro">接受本方案之孕婦乙型鏈球菌篩檢服務者，應由採集/檢查之特約醫事服務機構予以充分解說、諮詢有關孕婦乙型鏈球菌篩檢之相關重要資訊及填寫個案檢查資料。經濟弱勢之孕婦乙型鏈球菌篩檢服務，不得再收取差額。</div>
           </div>
         </li>
@@ -367,36 +349,16 @@
         <label for="reference__toggle__checkbox"></label>
       </div>
       <ul class="reference__list">
-        <li class="reference__list__link">
-          <a href="##">https://mamilove.com.tw/articles/352</a>
-        </li>
-        <li class="reference__list__link">
-          <a href="##">https://mamilove.com.tw/articles/352</a>
-        </li>
-        <li class="reference__list__link">
-          <a href="##">https://mamilove.com.tw/articles/352</a>
-        </li>
-        <li class="reference__list__link">
-          <a href="##">https://mamilove.com.tw/articles/352</a>
-        </li>
-        <li class="reference__list__link">
-          <a href="##">https://mamilove.com.tw/articles/352</a>
-        </li>
-        <li class="reference__list__link">
-          <a href="##">https://mamilove.com.tw/articles/352</a>
-        </li>
-        <li class="reference__list__link">
-          <a href="##">https://mamilove.com.tw/articles/352</a>
-        </li>
-        <li class="reference__list__link">
-          <a href="##">https://mamilove.com.tw/articles/352</a>
-        </li>
-        <li class="reference__list__link">
-          <a href="##">https://mamilove.com.tw/articles/352</a>
-        </li>
-        <li class="reference__list__link">
-          <a href="##">https://mamilove.com.tw/articles/352</a>
-        </li>
+        <li class="reference__list__link"><a href="##">https://mamilove.com.tw/articles/352</a></li>
+        <li class="reference__list__link"><a href="##">https://mamilove.com.tw/articles/352</a></li>
+        <li class="reference__list__link"><a href="##">https://mamilove.com.tw/articles/352</a></li>
+        <li class="reference__list__link"><a href="##">https://mamilove.com.tw/articles/352</a></li>
+        <li class="reference__list__link"><a href="##">https://mamilove.com.tw/articles/352</a></li>
+        <li class="reference__list__link"><a href="##">https://mamilove.com.tw/articles/352</a></li>
+        <li class="reference__list__link"><a href="##">https://mamilove.com.tw/articles/352</a></li>
+        <li class="reference__list__link"><a href="##">https://mamilove.com.tw/articles/352</a></li>
+        <li class="reference__list__link"><a href="##">https://mamilove.com.tw/articles/352</a></li>
+        <li class="reference__list__link"><a href="##">https://mamilove.com.tw/articles/352</a></li>
       </ul>
     </div>
   </section>
@@ -617,7 +579,6 @@
       </div>
       <div id="map"></div>
     </div>
-    <div class="referance"></div>
   </section>
 
   <section id="question__baby">
@@ -825,7 +786,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvl3VV9SXrOSgvQM7QJepGoCUs7RX8jFc&callback=initMap" async defer></script>
   <script src="script/globalBarChart.js"></script>
   <script src="script/taiwanBarChart.js"></script>
-  <!-- <script src="script/pagemove.js"></script> -->
+  <script src="script/pagemove.js"></script>
   <script src="script/claculator.js"></script>
   <script src="script/calcResult.js"></script>
   <script src="script/calcmove.js"></script>
