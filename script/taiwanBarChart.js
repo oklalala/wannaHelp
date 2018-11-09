@@ -30,7 +30,7 @@ function sendPost(type, year){
 // google.charts.setOnLoadCallback(drawMultSeries(initialData));
 
 // 畫出 barChart
-function drawMultSeries(setData) {
+function drawTaiwanMultSeries(setData) {
   var data = new google.visualization.arrayToDataTable(setData);
 
   var options = {
@@ -54,25 +54,25 @@ function drawMultSeries(setData) {
   chart.draw(data, options);
 }
 
-function getCountry() {
+function getTaiwan() {
   //  讀取radio的值
-  var form = document.getElementById("form_name");
+  var form = document.getElementById("taiwan__year");
   for (var i = 0; i < form.year.length; i++) {
     if (form.year[i].checked) {
       var year = form.year[i].value;
       console.log(year);
     }
   }
-  return renewDraw("infant",year);
+  return renewTaiwanDraw("infant",year);
 }
 
 // 把圖重新畫
-function renewDraw(type, year) {
+function renewTaiwanDraw(type, year) {
   var data = sendPost(type, year);
   console.log( data , "this is data");
   google.charts.load('current', { packages: ['corechart', 'bar'] });
-  google.charts.setOnLoadCallback(drawMultSeries(data));
+  google.charts.setOnLoadCallback(drawTaiwanMultSeries(data));
   // drawMultSeries(data);
 }
 
-// renewDraw("infant",2017);
+// renewTaiwanDraw("infant",2017);

@@ -387,7 +387,21 @@
         <p class="chart__description">嬰兒死亡率（IMR）的是每千名活產嬰兒的死亡人數，是根據永續發展目標永續發展目標 (SDGs) 中的指標之一，嬰兒死亡率（IMR）的是每千名活產嬰兒的死亡人數，經常被用來作為一個國家的健康水平的指標。 資料顯示，台灣的嬰幼兒死亡率與 OECD
         （經濟合作發展組織）國家比較起來，過去幾年來，皆排名在中後段班。</p>
         <figure id="chart__global"></figure>
-        </article>
+
+        <form name="global__year" id="global__year">
+          <label>
+            <input name="year" type="radio" value="2013" onclick="getGlobal()" checked="true">2013</label>
+          <label>
+            <input name="year" type="radio" value="2014" onclick="getGlobal()">2014</label>
+          <label>
+            <input name="year" type="radio" value="2015" onclick="getGlobal()">2015</label>
+          <label>
+            <input name="year" type="radio" value="2016" onclick="getGlobal()">2016</label>
+          <label>
+            <input name="year" type="radio" value="2017" onclick="getGlobal()">2017</label>
+        </form>
+
+      </article>
       <article class="chart">
         <h3 class="chart__title">台灣各縣市嬰兒死亡率比較</h3>
           <p class="chart__description">那到底為什麼台灣的嬰兒死亡率會一直達不到我國對永續發展目標(SDGs)，「新生兒死亡率維持或低於千分之2.4」的標準？讓我們來看看台灣各縣市的嬰兒死亡率。</p>
@@ -395,17 +409,17 @@
         <figure id="chart__taiwan"></figure>
 
         <!--radio用法-->
-        <form name="form_name" id="form_name">
+        <form name="taiwan__year" id="taiwan__year">
           <label>
-            <input name="year" type="radio" value="2013" onclick="getCountry()" checked="true">2013</label>
+            <input name="year" type="radio" value="2013" onclick="getTaiwan()" checked="true">2013</label>
           <label>
-            <input name="year" type="radio" value="2014" onclick="getCountry()">2014</label>
+            <input name="year" type="radio" value="2014" onclick="getTaiwan()">2014</label>
           <label>
-            <input name="year" type="radio" value="2015" onclick="getCountry()">2015</label>
+            <input name="year" type="radio" value="2015" onclick="getTaiwan()">2015</label>
           <label>
-            <input name="year" type="radio" value="2016" onclick="getCountry()">2016</label>
+            <input name="year" type="radio" value="2016" onclick="getTaiwan()">2016</label>
           <label>
-            <input name="year" type="radio" value="2017" onclick="getCountry()" >2017</label>
+            <input name="year" type="radio" value="2017" onclick="getTaiwan()" >2017</label>
         </form>
         <p class="chart__description">2017年台灣嬰兒死亡率為4.0‰，而花蓮縣、台東縣超過6.0‰，屏東縣、高雄市超過5.0‰，是嬰兒高死亡率的紅燈區。衛福部次長薛瑞元時指出，主要原因仍可能與偏遠地區醫療的可近性不足且高風險妊娠處理能力不夠等因素有關。</p>
       </article>
@@ -801,7 +815,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvl3VV9SXrOSgvQM7QJepGoCUs7RX8jFc&callback=initMap" async defer></script>
   <script src="script/globalBarChart.js"></script>
   <script src="script/taiwanBarChart.js"></script>
-  <script src="script/pagemove.js"></script>
+  <!-- <script src="script/pagemove.js"></script> -->
   <script src="script/claculator.js"></script>
   <script src="script/calcResult.js"></script>
   <script src="script/calcmove.js"></script>
