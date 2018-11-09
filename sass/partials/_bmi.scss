@@ -5,10 +5,6 @@
   @extend %container--fixed;
   border-bottom: none;
   height: auto;
-  padding-top: 50px;
-  &:first-child{
-    padding-top: 120px;
-  }
 }
 .bmi__intro{
   @extend %answer__title__template;
@@ -237,14 +233,14 @@
         background-color: $label__background__color;
         border-radius: 10px;
         padding: 14px 20px 18px;
-        
+
         color: $label__font__color;
         font-size: 15px;
         line-height: 30px;
       }
     }
   }
-} 
+}
 
 
 
@@ -262,6 +258,3 @@
     }
   }
 }
-
-
-

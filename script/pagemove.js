@@ -91,7 +91,7 @@ function pagemove() {
   //對象要向上還是向下(longpage)
   if(pageType == "long"){
     if (window.scrollY < (current.offsetTop + current.clientHeight - (0.5 * fullVh))) {
-      if((current.offsetTop + current.clientHeight - 0.9 * fullVh) < window.scrollY){
+      if((current.offsetTop + current.clientHeight - fullVh) < window.scrollY){
         onethingdo = "down";
         downmove(current);
       }

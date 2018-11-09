@@ -31,15 +31,16 @@ xhrBabydeath.onreadystatechange = function(){
         },
         //調整整塊區域的位置
         chartArea:{
-          width: 379,
-          height: 379,
+          width: 360,
+          height: 360,
         },
-        fontSize:'15',
+        fontSize:'14',
         //說明圖標相關調整
         legend:{
           position: 'none',
         },
         pieSliceText:'none',
+        // pieResidueSliceColor:'#fff7e2',
         //圓餅圖切片顏色
         slices:{
           0: {color: '#ed6555'},
@@ -53,6 +54,7 @@ xhrBabydeath.onreadystatechange = function(){
           8: {color: '#633ebb'},
           9: {color: '#0082c3'},
           10: {color: '#9b9b9b'},
+
         },
         //提示標籤的相關設定
         tooltip:{
