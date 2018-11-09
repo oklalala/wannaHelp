@@ -3,6 +3,27 @@ var taiwanDeathRate = "https://open-data-220705.appspot.com/api/death_rate";
 var xhrTaiwanDeathRate = new XMLHttpRequest();
 var taiwanDeathRateData = [['county', '死亡率']];
 
+//  讀取radio的值
+function getTaiwan() {
+  var form = document.getElementById("taiwan__year");
+  for (var i = 0; i < form.year.length; i++) {
+    if (form.year[i].checked) {
+      var year = form.year[i].value;
+      // console.log(year);
+    }
+  }
+  return renewTaiwanDraw("infant", year);
+}
+
+// 把圖重新畫
+function renewTaiwanDraw(type, year) {
+  var data = sendPost(type, year);
+  // console.log( data , "this is data");
+  google.charts.load('current', { packages: ['corechart', 'bar'] });
+  google.charts.setOnLoadCallback(drawTaiwanMultSeries(data));
+  // drawMultSeries(data);
+}
+
 // 送出 Post
 function sendPost(type, year){
   xhrTaiwanDeathRate.open("POST", taiwanDeathRate, true);
@@ -15,12 +36,13 @@ function sendPost(type, year){
   xhrTaiwanDeathRate.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
       var rowDeathRate = JSON.parse(this.responseText);
-      console.log(rowDeathRate, 111111111111);
+      // console.log(rowDeathRate, 111111111111);
       var count = 0;
       for (key in rowDeathRate.data) {
         taiwanDeathRateData[count++ + 1] = [key, rowDeathRate.data[key]];
       }
-      console.log(taiwanDeathRateData.pop(), 99999999999999);
+      taiwanDeathRateData.pop();
+      // console.log(taiwanDeathRateData, 99999999999999);
     }
   }
   return taiwanDeathRateData;
@@ -31,8 +53,9 @@ function sendPost(type, year){
 
 // 畫出 barChart
 function drawTaiwanMultSeries(setData) {
+  // console.log(setData, "hehehehehe");
   var data = new google.visualization.arrayToDataTable(setData);
-
+  // console.log( data, "taiwan comeon!");
   var options = {
     hAxis: {
     },
@@ -54,25 +77,7 @@ function drawTaiwanMultSeries(setData) {
   chart.draw(data, options);
 }
 
-function getTaiwan() {
-  //  讀取radio的值
-  var form = document.getElementById("taiwan__year");
-  for (var i = 0; i < form.year.length; i++) {
-    if (form.year[i].checked) {
-      var year = form.year[i].value;
-      console.log(year);
-    }
-  }
-  return renewTaiwanDraw("infant",year);
-}
 
-// 把圖重新畫
-function renewTaiwanDraw(type, year) {
-  var data = sendPost(type, year);
-  console.log( data , "this is data");
-  google.charts.load('current', { packages: ['corechart', 'bar'] });
-  google.charts.setOnLoadCallback(drawTaiwanMultSeries(data));
-  // drawMultSeries(data);
-}
+
 
 // renewTaiwanDraw("infant",2017);
