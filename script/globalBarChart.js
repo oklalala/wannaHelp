@@ -1,6 +1,6 @@
 var xhrGlobalDeathData = new XMLHttpRequest();
 var globalDeathData = [['Country', '死亡率']];
-
+// document.addEventListener('load' getGlobal);
 function getGlobal() {
   //  讀取radio的值
   var form = document.getElementById("global__year");
