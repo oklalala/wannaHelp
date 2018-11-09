@@ -21,7 +21,10 @@
 }
 .chart{
   color: $hot__color;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
 
   &__title {
     font-size: 24px;
@@ -30,6 +33,17 @@
   }
   &__description {
     @extend %description__display;
+  }
+  form {
+    text-align: center;
+    margin: 20px 0;
+    label{
+      padding: 0 20px;
+    }
+    input {
+      margin-right: 10px;
+    }
+    
   }
 }
 
