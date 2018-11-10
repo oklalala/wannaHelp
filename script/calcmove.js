@@ -1,6 +1,6 @@
 //homebabymove(.babyactive)
 const calctotal = document.querySelector(".total");
-const moveToResultAt = document.getElementById("calcResult").offsetTop;
+const moveToResultAt = document.getElementById("calcResult").offsetTop - 100;
 
 function calcmove(){
 
