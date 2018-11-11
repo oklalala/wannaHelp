@@ -144,6 +144,11 @@
     line-height: 97px;
   }
 }
+.amount {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+}
 .calcmove{
     position: absolute;
     top:1660px;
