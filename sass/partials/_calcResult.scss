@@ -1,8 +1,6 @@
-@import "./modules/variables.scss";
-@import "./modules/mixin-mediaquery.scss";
-@import "./modules/extendclass.scss";
 #calcResult{
   background-color: #fff7e2;
+  position: relative;
 }
 .calcResult__container{
   @extend %container--fixed;
@@ -12,7 +10,7 @@
 .calc__result__title {
   color: $hot__color;
   font-size: 40px;
-  padding-top: 350px;
+  padding-top: 300px;
   text-align: center;
   .total-amount {
     font-weight: bold;
@@ -34,7 +32,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
-  padding: 40px 0;
+  padding: 40px 0 110px 0;
 }
 
 
@@ -90,14 +88,21 @@
 
 .reference{
   background-color: #fff;
-  padding: 25px 0;
-  position: relative;
+  // padding:  0 0 25px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   text-align: center;
   &__text {
     color: $hot__color;
+    cursor: pointer;
     font-size: 17px;
     font-weight: bold;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
+    grid-column: 2 / 3;
+    justify-self: center;
+    padding: 25px 0;
   }
   a {
     color: $hot__color;
@@ -113,6 +118,10 @@
       //   display: inline-block;
       // }
     }
+    label {
+      display: none;
+    }
+
     label::before {
       background-image: url(../img/cross@2x.png);
       background-size: 18px 18px;
@@ -125,8 +134,11 @@
     }
   }
   &__list {
-    // display: none;
-    // transform: translateY(100%);
+    display: none;
+    transition: all .5s;
+    &__active {
+      display: block;
+    }
     &__link {
         margin-bottom: 10px;
 
@@ -136,4 +148,3 @@
       }
   }
 }
-// 隱藏 reference list

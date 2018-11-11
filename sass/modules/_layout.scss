@@ -1,0 +1,6 @@
+.column {
+  display: flex;
+  &__half {
+    width: 50%;
+  } 
+}

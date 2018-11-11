@@ -3,7 +3,6 @@
   margin: 0 auto;
   max-width: 1100px;
   height: 100vh;
-  border-bottom: 1px solid black;
   // @include mediaquery_phone{
   //   max-width: $width--phone;
   // }
@@ -40,5 +39,15 @@
 
 %description__display {
   font-size: 17px;
+  line-height: 30px;
+}
+
+%hint__display{
+  background: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+
+  color: $hint__font__color;
+  font-size: 15px;
   line-height: 30px;
 }
