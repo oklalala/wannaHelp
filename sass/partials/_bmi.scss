@@ -224,6 +224,9 @@
   &.active {
     display: block;
   }
+  &:focus {
+    outline: none;
+  }
   .column__half{
     width: 60%;
     &:first-child{
