@@ -1,0 +1,1056 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+  height: 500px;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+}
+.column__half {
+  width: 50%;
+}
+
+.home__container, .intro__container, .question__baby__container, .question__pregnancy__container, .question__cost__container, .bmi__container, .safety__container, .death__container, .calc__container, .calcResult__container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1100px;
+  height: 100vh;
+}
+
+.bmi__intro, .safety__intro, .death__intro, .calc__intro {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 118px;
+  padding-bottom: 40px;
+  color: #ed6555;
+}
+.bmi__intro img, .safety__intro img, .death__intro img, .calc__intro img {
+  width: 38px;
+  height: 38px;
+  margin-right: 20px;
+}
+
+.bmi__intro__title, .safety__intro__title, .death__intro__title, .calc__intro__title {
+  font-size: 40px;
+  font-weight: 500;
+  padding: 9px 0px 9px;
+  display: flex;
+}
+
+.bmi__intro__description, .food__description, .safety__intro__description, .safety__description, .death__intro__description, .chart__description, .calc__intro__description {
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.safety__hint, .safety__prevent__hint {
+  background: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #4a4a4a;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: rgba(255, 247, 226, 0.5);
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.nav__logo {
+  width: 198px;
+  height: 47px;
+}
+.nav__logo img {
+  width: 100%;
+}
+
+.nav__hamburger {
+  width: 28px;
+  height: 23px;
+  display: block;
+  background-image: url("../img/menu@2x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nav__hamburgercheck {
+  display: none;
+}
+
+.nav__list {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  background-color: #50504d;
+  height: 100vh;
+  width: 30%;
+  padding: 20px;
+  flex-direction: column;
+  z-index: 3;
+  transition: all .5s ease-in-out;
+}
+.nav__list label {
+  display: block;
+  height: 30px;
+  width: 100%;
+  text-align: right;
+}
+.nav__list label i {
+  font-size: 30px;
+}
+.nav__list__item li {
+  display: flex;
+  border-bottom: 0.5px gray solid;
+  padding: 10px;
+  align-items: center;
+}
+.nav__list__item li i {
+  display: block;
+  font-size: 25px;
+  margin-right: 10px;
+}
+.nav__list__item li a {
+  display: block;
+  font-size: 20px;
+  color: white;
+  line-height: 30px;
+}
+
+#hamburger:checked ~ .nav__list {
+  right: 0;
+}
+
+#home {
+  background-color: #fff7e2;
+}
+
+.home__container {
+  padding-top: 30vh;
+  text-align: center;
+}
+.home__container__img {
+  width: 165px;
+  height: 239px;
+  margin: 0 auto 36px;
+  transition: transform 1s;
+}
+.home__container__img img {
+  width: 100%;
+}
+.home__container__title {
+  font-family: 'Baloo', cursive;
+  font-size: 40px;
+  color: #ed6555;
+  margin: 0 auto;
+}
+.home__container__subtitle {
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 2;
+  color: #ed6555;
+}
+
+.babyactive {
+  transform: translate(-25vw, 100vh);
+}
+
+#intro {
+  background-color: #fff7e2;
+}
+
+.intro__container {
+  padding-top: 30vh;
+  display: flex;
+  align-items: flex-start;
+}
+.intro__container__mainImg {
+  width: 165px;
+  height: 239px;
+  margin: 0 auto 36px;
+}
+.intro__container__mainImg img {
+  width: 100%;
+  visibility: hidden;
+}
+.intro__container__story {
+  width: 66%;
+  background-color: white;
+  font-size: 17px;
+  line-height: 2;
+  color: #4a4a4a;
+  padding: 27px 42px;
+  position: relative;
+  z-index: 2;
+}
+.intro__container__story__triangle {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid #fff7e2;
+  border-bottom: 15px solid #fff7e2;
+  border-right: 30px solid white;
+}
+
+#question__baby, #question__pregnancy, #question__cost {
+  background-color: #ed6555;
+}
+
+.question__baby__container, .question__pregnancy__container, .question__cost__container {
+  padding-top: 40vh;
+}
+.question__baby__container__title, .question__pregnancy__container__title, .question__cost__container__title {
+  font-size: 40px;
+  text-align: center;
+  color: #fff7e2;
+  margin-bottom: 20px;
+}
+.question__baby__container__subtitle, .question__pregnancy__container__subtitle, .question__cost__container__subtitle {
+  font-size: 17px;
+  color: #fff7e2;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.76;
+}
+
+#bmi {
+  background-color: #fff7e2;
+}
+
+.bmi__container {
+  border-bottom: none;
+  height: auto;
+}
+
+.bmi__weightScale__title {
+  font-size: 24px;
+  font-weight: 550;
+  color: #ed6555;
+  margin-bottom: 29px;
+}
+.bmi__weightScale__content {
+  display: flex;
+  justify-content: space-between;
+}
+.bmi__weightScale__content__input {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.bmi__weightScale__content__input__heightText, .bmi__weightScale__content__input__weightText {
+  font-size: 17px;
+  font-weight: 500;
+  color: #ed6555;
+  margin-bottom: 6px;
+}
+.bmi__weightScale__content__input__heightInput, .bmi__weightScale__content__input__weightInput {
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: none;
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #4a4a4a;
+  padding-left: 9px;
+}
+.bmi__weightScale__content__input button {
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  background-color: #ed6555;
+  border: none;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+}
+.bmi__weightScale__content__result {
+  width: 30%;
+}
+.bmi__weightScale__content__result__bmiTitle, .bmi__weightScale__content__result__weightTitle {
+  width: 100%;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #f7f7f8;
+  font-size: 15px;
+  font-weight: 600;
+  color: #9b9b9b;
+}
+.bmi__weightScale__content__result__bmiresult, .bmi__weightScale__content__result__weightresult {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  font-size: 34px;
+  font-weight: 500;
+  color: #ed6555;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+.bmi__weightScale__content__result__bmiintro, .bmi__weightScale__content__result__weightintro {
+  width: 240px;
+  height: 30px;
+  font-family: PingFangTC;
+  font-size: 13px;
+  line-height: 2;
+  letter-spacing: normal;
+  color: #9b9b9b;
+}
+.bmi__weightScale__content__result__bmiintro {
+  margin-bottom: 20px;
+}
+.bmi__weightScale__content__ideal {
+  width: 30%;
+  position: relative;
+}
+.bmi__weightScale__content__ideal__img {
+  width: 203px;
+  height: 219px;
+  position: relative;
+  margin: 0 auto;
+}
+.bmi__weightScale__content__ideal__img img {
+  width: 100%;
+}
+.bmi__weightScale__content__ideal__img__ideal {
+  position: absolute;
+  bottom: 43px;
+  left: 54.3px;
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  color: #ed6555;
+}
+.bmi__weightScale__content__ideal__img__ideal span {
+  margin-left: 8px;
+  font-size: 15px;
+}
+.bmi__weightScale__intro {
+  font-size: 17px;
+  line-height: 1.76;
+  color: #ed6555;
+  padding: 20px 0;
+}
+.bmi__weightScale__table {
+  width: 100%;
+  border: solid 1px #fb998d;
+  font-family: 'Roboto', sans-serif;
+}
+.bmi__weightScale__table__title {
+  background-color: #fb998d;
+  color: white;
+  height: 44px;
+}
+.bmi__weightScale__table__content {
+  background-color: #ffffff;
+  border-bottom: solid 1px #fb998d;
+  height: 44px;
+  font-size: 17px;
+  color: #ed6555;
+}
+.bmi__weightScale__table td {
+  text-align: center;
+  width: 33%;
+}
+
+.food {
+  color: #ed6555;
+  padding-bottom: 30px;
+}
+.food__title {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.food__description {
+  margin-bottom: 20px;
+}
+.food__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.food__item {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  font-size: 15px;
+  margin-top: 50px;
+}
+.food img {
+  width: 135px;
+  height: 135px;
+}
+.food__hint {
+  padding: 0 30px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+/* Style the tab */
+.tab {
+  width: 660px;
+  margin: 0px auto 20px;
+  border-radius: 18px;
+  background-color: #f7f7f8;
+  text-align: center;
+}
+.tablinks {
+  border: none;
+  border-radius: 18px;
+  padding: 6px 24px;
+  background-color: #f7f7f8;
+  cursor: pointer;
+  font-size: 17px;
+  color: #ed6555;
+  transition: 0.3s;
+}
+.tablinks:hover {
+  background-color: #ed6555;
+  color: #f7f7f8;
+  transition: 0.3s;
+}
+.tablinks.active {
+  background-color: #ed6555;
+  color: #f7f7f8;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 40px 80px;
+  color: #ed6555;
+}
+.tabcontent.active {
+  display: block;
+}
+.tabcontent .column__half {
+  width: 60%;
+}
+.tabcontent .column__half:first-child {
+  width: 40%;
+  padding-right: 40px;
+}
+.tabcontent .column__half:first-child p {
+  background-color: #f7f7f8;
+  border-radius: 10px;
+  padding: 14px 20px 18px;
+  color: #9b9b9b;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.food__cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 37px;
+}
+.food__card {
+  width: 30%;
+  margin-top: 60px;
+  margin-right: 5%;
+}
+.food__card img {
+  width: 170px;
+  margin-bottom: 10px;
+}
+.food__card:nth-child(3n) {
+  margin-right: 0;
+}
+.food__card__label {
+  line-height: 30px;
+}
+.food__card {
+  text-align: center;
+  width: 47%;
+}
+.food__card:nth-child(2n) {
+  margin-right: 0px;
+}
+.food__card h3 {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#safety {
+  background-color: #fff7e2;
+  padding-bottom: 150px;
+}
+
+.safety__container {
+  height: auto;
+  position: relative;
+}
+
+.safety__intro__title img {
+  width: 61px;
+  height: 45px;
+}
+
+.safety {
+  color: #ed6555;
+  padding-bottom: 50px;
+}
+.safety__text {
+  padding-right: 120px;
+}
+.safety__title {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.safety__description {
+  margin-bottom: 20px;
+}
+.safety__image {
+  text-align: center;
+}
+.safety__image img {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.safety__prevent {
+  text-align: center;
+}
+.safety__prevent__title {
+  margin-top: 30px;
+  font-size: 20px;
+}
+.safety__prevent__cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 37px;
+}
+.safety__prevent__card {
+  width: 30%;
+  margin-top: 40px;
+  margin-right: 5%;
+}
+.safety__prevent__card img {
+  width: 90px;
+  margin-bottom: 10px;
+}
+.safety__prevent__card:nth-child(3n) {
+  margin-right: 0;
+}
+.safety__prevent__card__label {
+  line-height: 30px;
+}
+.safety__prevent__hint {
+  text-align: left;
+}
+
+.safety__cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 37px;
+}
+.safety__card {
+  width: 30%;
+  margin-top: 20px;
+  margin-right: 5%;
+}
+.safety__card img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.safety__card:nth-child(3n) {
+  margin-right: 0;
+}
+.safety__card__label {
+  line-height: 30px;
+}
+
+.legend {
+  color: #ed6555;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.legend .red-circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ed6555;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.legend-text {
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+#death {
+  background-color: #fff7e2;
+}
+
+.death__container {
+  height: auto;
+  position: relative;
+}
+.death__container img {
+  height: 47px;
+}
+
+.chart {
+  color: #ed6555;
+  margin-bottom: 50px;
+}
+.chart:last-child {
+  margin-bottom: 0px;
+}
+.chart__title {
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+.chart form {
+  text-align: center;
+  margin: 20px 0;
+}
+.chart form label {
+  padding: 0 20px;
+}
+.chart form input {
+  margin-right: 10px;
+}
+
+.chart__legand {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.chart__legand__item {
+  display: flex;
+  width: 50%;
+  margin-bottom: 20px;
+}
+.chart__legand__item__color {
+  width: 36px;
+  height: 16px;
+  margin-right: 12px;
+}
+.chart__legand__item:nth-child(1) .chart__legand__item__color {
+  background-color: #ed6555;
+}
+.chart__legand__item:nth-child(2) .chart__legand__item__color {
+  background-color: #50e3c2;
+}
+.chart__legand__item:nth-child(3) .chart__legand__item__color {
+  background-color: #f5a623;
+}
+.chart__legand__item:nth-child(4) .chart__legand__item__color {
+  background-color: #b8e986;
+}
+.chart__legand__item:nth-child(5) .chart__legand__item__color {
+  background-color: #ffcc01;
+}
+.chart__legand__item:nth-child(6) .chart__legand__item__color {
+  background-color: #2ebb86;
+}
+.chart__legand__item:nth-child(7) .chart__legand__item__color {
+  background-color: #bc6cca;
+}
+.chart__legand__item:nth-child(8) .chart__legand__item__color {
+  background-color: #6fa8eb;
+}
+.chart__legand__item:nth-child(9) .chart__legand__item__color {
+  background-color: #633ebb;
+}
+.chart__legand__item:nth-child(10) .chart__legand__item__color {
+  background-color: #0082c3;
+}
+.chart__legand__item:nth-child(11) .chart__legand__item__color {
+  background-color: #9b9b9b;
+}
+.chart__legand__item__label {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.column__half .chart__description {
+  padding-right: 80px;
+}
+
+.babypiechart {
+  position: relative;
+}
+
+.deathpiechart {
+  position: absolute;
+  top: 85px;
+  right: 73px;
+}
+
+#calc {
+  background-color: #fff7e2;
+  padding-bottom: 100px;
+}
+
+.calc__container {
+  height: auto;
+  position: relative;
+}
+
+.cost {
+  color: #ed6555;
+  width: 50%;
+}
+.cost__period {
+  margin-bottom: 50px;
+}
+.cost__period:last-child {
+  margin-bottom: 0;
+}
+.cost__period:last-child .cost__period__item {
+  margin-bottom: 0;
+}
+.cost__period__title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.cost__period__title span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.cost__period__item {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 10px 0px;
+  margin: 20px auto;
+  background: white;
+  font-size: 17px;
+}
+.cost__period__item:last-child {
+  margin-bottom: 50px;
+}
+.cost__period__item .star {
+  margin-left: 16px;
+  margin-right: 3px;
+  font-size: 15px;
+  position: absolute;
+}
+.cost__period__item__checkbox {
+  margin-left: 40px;
+  margin-right: 12px;
+}
+.cost__period__item__checkbox input {
+  display: none;
+}
+.cost__period__item__checkbox input:checked + label::before {
+  background-image: url(../img/check@2x.png);
+}
+.cost__period__item__checkbox label::before {
+  background-image: url(../img/uncheck@2x.png);
+  background-size: cover;
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+.cost__period__item .expand input:checked + label::before {
+  background-image: url(../img/hide@2x.png);
+}
+.cost__period__item .expand label::before {
+  background-image: url(../img/plus@2x.png);
+}
+.cost__period__item .description {
+  width: 146px;
+  line-height: 24px;
+}
+.cost__period__item .quantity {
+  margin: 0 25% 0 8%;
+}
+
+.cost__period__item__expand {
+  width: 100%;
+}
+.cost__period__item__expand__list {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.cost__period__item__referance {
+  text-align: right;
+}
+.cost__period__item__referance a {
+  color: #ed6555;
+  text-decoration: underline;
+}
+
+.total {
+  position: sticky;
+  top: 60px;
+  margin-bottom: 50px;
+  float: right;
+  width: 430px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: top 0.3s;
+}
+.total__title {
+  border-radius: 6px 6px 0 0;
+  background: #f7f7f8;
+  color: #9b9b9b;
+  font-size: 15px;
+  line-height: 29px;
+}
+.total__amount {
+  background: white;
+  color: #ed6555;
+  font-size: 40px;
+  line-height: 97px;
+}
+
+.calcmove {
+  position: absolute;
+  top: 1660px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.plus, .minus {
+  cursor: pointer;
+}
+
+#calcResult {
+  background-color: #fff7e2;
+  position: relative;
+}
+
+.calcResult__container {
+  border-bottom: none;
+  height: auto;
+}
+
+.calc__result__title {
+  color: #ed6555;
+  font-size: 40px;
+  padding-top: 300px;
+  text-align: center;
+}
+.calc__result__title .total-amount {
+  font-weight: bold;
+}
+
+.calc__result__subtitle {
+  color: #ed6555;
+  font-size: 17px;
+  line-height: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 27px;
+  text-align: center;
+}
+
+.subsidy {
+  color: #ed6555;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  padding: 40px 0 110px 0;
+}
+
+.subsidy__item {
+  background-color: #fff;
+  display: flex;
+  padding: 15px 16px 20px;
+}
+.subsidy__item .subsidy-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
+.subsidy__item__checkbox {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+.subsidy__item__checkbox input {
+  display: none;
+}
+.subsidy__item__checkbox input:checked + label::before {
+  background-image: url(../img/check@2x.png);
+}
+.subsidy__item__checkbox label::before {
+  background-image: url(../img/uncheck@2x.png);
+  background-size: 24px 24px;
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+.subsidy__item__title {
+  font-size: 17px;
+}
+.subsidy__item__ammount {
+  font-size: 17px;
+  justify-self: end;
+}
+.subsidy__item__intro {
+  grid-column: 1 / -1;
+  font-size: 15px;
+  line-height: 23px;
+  margin-top: 11px;
+}
+
+.reference {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.reference__text {
+  color: #ed6555;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bold;
+  grid-column: 2 / 3;
+  justify-self: center;
+  padding: 25px 0;
+}
+.reference a {
+  color: #ed6555;
+  text-decoration: underline;
+}
+.reference__toggle {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+.reference__toggle input {
+  display: none;
+}
+.reference__toggle label {
+  display: none;
+}
+.reference__toggle label::before {
+  background-image: url(../img/cross@2x.png);
+  background-size: 18px 18px;
+  content: '';
+  display: inline-block;
+  height: 18px;
+  cursor: pointer;
+  width: 18px;
+}
+.reference__list {
+  display: none;
+  transition: all .5s;
+}
+.reference__list__active {
+  display: block;
+}
+.reference__list__link {
+  margin-bottom: 10px;
+}
+.reference__list__link:last-child {
+  margin-bottom: 0;
+}
